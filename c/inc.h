@@ -1,0 +1,10 @@
+#include <signal.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <syslog.h>
+#include <sys/ttycom.h>
+#include <sys/ioctl.h>
+#include <setjmp.h>
+#include <strings.h>

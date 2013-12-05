@@ -1,0 +1,560 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BEGIN	lex/calc/lex.yy.c	/^#define BEGIN /;"	d	file:
+BEGIN	lex/lex.yy.c	/^#define BEGIN /;"	d	file:
+BUFF_SIZE	c/pipe_test.c	/^#define BUFF_SIZE /;"	d	file:
+BUF_SIZE	c/copy_big_file.c	/^#define BUF_SIZE /;"	d	file:
+BUF_SIZE	c/read_dir.c	/^#define BUF_SIZE /;"	d	file:
+DEPTH	c/test_file_depth.c	/^#define DEPTH /;"	d	file:
+ECHO	lex/calc/lex.yy.c	/^#define ECHO /;"	d	file:
+ECHO	lex/lex.yy.c	/^#define ECHO /;"	d	file:
+EOB_ACT_CONTINUE_SCAN	lex/calc/lex.yy.c	/^#define EOB_ACT_CONTINUE_SCAN /;"	d	file:
+EOB_ACT_CONTINUE_SCAN	lex/lex.yy.c	/^#define EOB_ACT_CONTINUE_SCAN /;"	d	file:
+EOB_ACT_END_OF_FILE	lex/calc/lex.yy.c	/^#define EOB_ACT_END_OF_FILE /;"	d	file:
+EOB_ACT_END_OF_FILE	lex/lex.yy.c	/^#define EOB_ACT_END_OF_FILE /;"	d	file:
+EOB_ACT_LAST_MATCH	lex/calc/lex.yy.c	/^#define EOB_ACT_LAST_MATCH /;"	d	file:
+EOB_ACT_LAST_MATCH	lex/lex.yy.c	/^#define EOB_ACT_LAST_MATCH /;"	d	file:
+FLEXINT_H	lex/calc/lex.yy.c	/^#define FLEXINT_H$/;"	d	file:
+FLEXINT_H	lex/lex.yy.c	/^#define FLEXINT_H$/;"	d	file:
+FLEX_BETA	lex/calc/lex.yy.c	/^#define FLEX_BETA$/;"	d	file:
+FLEX_BETA	lex/lex.yy.c	/^#define FLEX_BETA$/;"	d	file:
+FLEX_SCANNER	lex/calc/lex.yy.c	/^#define FLEX_SCANNER$/;"	d	file:
+FLEX_SCANNER	lex/lex.yy.c	/^#define FLEX_SCANNER$/;"	d	file:
+INITIAL	lex/calc/lex.yy.c	/^#define INITIAL /;"	d	file:
+INITIAL	lex/lex.yy.c	/^#define INITIAL /;"	d	file:
+INT16_MAX	lex/calc/lex.yy.c	/^#define INT16_MAX /;"	d	file:
+INT16_MAX	lex/lex.yy.c	/^#define INT16_MAX /;"	d	file:
+INT16_MIN	lex/calc/lex.yy.c	/^#define INT16_MIN /;"	d	file:
+INT16_MIN	lex/lex.yy.c	/^#define INT16_MIN /;"	d	file:
+INT32_MAX	lex/calc/lex.yy.c	/^#define INT32_MAX /;"	d	file:
+INT32_MAX	lex/lex.yy.c	/^#define INT32_MAX /;"	d	file:
+INT32_MIN	lex/calc/lex.yy.c	/^#define INT32_MIN /;"	d	file:
+INT32_MIN	lex/lex.yy.c	/^#define INT32_MIN /;"	d	file:
+INT8_MAX	lex/calc/lex.yy.c	/^#define INT8_MAX /;"	d	file:
+INT8_MAX	lex/lex.yy.c	/^#define INT8_MAX /;"	d	file:
+INT8_MIN	lex/calc/lex.yy.c	/^#define INT8_MIN /;"	d	file:
+INT8_MIN	lex/lex.yy.c	/^#define INT8_MIN /;"	d	file:
+LEN	erl/test.erl	/^-define(LEN,100).$/;"	d
+NUMBER	lex/calc/y.tab.c	/^     NUMBER = 258,$/;"	e	enum:yytokentype	file:
+NUMBER	lex/calc/y.tab.c	/^#define NUMBER /;"	d	file:
+NUMBER	lex/calc/y.tab.h	/^     NUMBER = 258,$/;"	e	enum:yytokentype
+NUMBER	lex/calc/y.tab.h	/^#define NUMBER /;"	d
+OPERATOR	lex/calc/y.tab.c	/^     OPERATOR = 259$/;"	e	enum:yytokentype	file:
+OPERATOR	lex/calc/y.tab.c	/^#define OPERATOR /;"	d	file:
+OPERATOR	lex/calc/y.tab.h	/^     OPERATOR = 259$/;"	e	enum:yytokentype
+OPERATOR	lex/calc/y.tab.h	/^#define OPERATOR /;"	d
+OP_ADD	c/chgmod.c	/^#define OP_ADD /;"	d	file:
+OP_ADD	c/chmod_test.c	/^#define OP_ADD /;"	d	file:
+OP_REMOVE	c/chgmod.c	/^#define OP_REMOVE /;"	d	file:
+OP_REMOVE	c/chmod_test.c	/^#define OP_REMOVE /;"	d	file:
+REJECT	lex/calc/lex.yy.c	/^#define REJECT /;"	d	file:
+REJECT	lex/lex.yy.c	/^#define REJECT /;"	d	file:
+RWRWRW	c/chgmod.c	/^#define RWRWRW /;"	d	file:
+RWRWRW	c/chmod_test.c	/^#define RWRWRW /;"	d	file:
+RWRWRW	c/umask_test.c	/^#define RWRWRW /;"	d	file:
+UINT16_MAX	lex/calc/lex.yy.c	/^#define UINT16_MAX /;"	d	file:
+UINT16_MAX	lex/lex.yy.c	/^#define UINT16_MAX /;"	d	file:
+UINT32_MAX	lex/calc/lex.yy.c	/^#define UINT32_MAX /;"	d	file:
+UINT32_MAX	lex/lex.yy.c	/^#define UINT32_MAX /;"	d	file:
+UINT8_MAX	lex/calc/lex.yy.c	/^#define UINT8_MAX /;"	d	file:
+UINT8_MAX	lex/lex.yy.c	/^#define UINT8_MAX /;"	d	file:
+YYABORT	lex/calc/y.tab.c	/^#define YYABORT	/;"	d	file:
+YYACCEPT	lex/calc/y.tab.c	/^#define YYACCEPT	/;"	d	file:
+YYBACKUP	lex/calc/y.tab.c	/^#define YYBACKUP(/;"	d	file:
+YYBISON	lex/calc/y.tab.c	/^#define YYBISON /;"	d	file:
+YYBISON_VERSION	lex/calc/y.tab.c	/^#define YYBISON_VERSION /;"	d	file:
+YYCOPY	lex/calc/y.tab.c	/^#   define YYCOPY(/;"	d	file:
+YYDEBUG	lex/calc/y.tab.c	/^# define YYDEBUG /;"	d	file:
+YYDPRINTF	lex/calc/y.tab.c	/^# define YYDPRINTF(/;"	d	file:
+YYEMPTY	lex/calc/y.tab.c	/^#define YYEMPTY	/;"	d	file:
+YYEOF	lex/calc/y.tab.c	/^#define YYEOF	/;"	d	file:
+YYERRCODE	lex/calc/y.tab.c	/^#define YYERRCODE	/;"	d	file:
+YYERROR	lex/calc/y.tab.c	/^#define YYERROR	/;"	d	file:
+YYERROR_VERBOSE	lex/calc/y.tab.c	/^# define YYERROR_VERBOSE /;"	d	file:
+YYERROR_VERBOSE	lex/calc/y.tab.c	/^# undef YYERROR_VERBOSE$/;"	d	file:
+YYFAIL	lex/calc/y.tab.c	/^#define YYFAIL	/;"	d	file:
+YYFINAL	lex/calc/y.tab.c	/^#define YYFINAL /;"	d	file:
+YYFPRINTF	lex/calc/y.tab.c	/^#  define YYFPRINTF /;"	d	file:
+YYFREE	lex/calc/y.tab.c	/^#   define YYFREE /;"	d	file:
+YYID	lex/calc/y.tab.c	/^# define YYID(/;"	d	file:
+YYID	lex/calc/y.tab.c	/^YYID (int i)$/;"	f	file:
+YYINITDEPTH	lex/calc/y.tab.c	/^# define YYINITDEPTH /;"	d	file:
+YYLAST	lex/calc/y.tab.c	/^#define YYLAST /;"	d	file:
+YYLEX	lex/calc/y.tab.c	/^# define YYLEX /;"	d	file:
+YYLLOC_DEFAULT	lex/calc/y.tab.c	/^# define YYLLOC_DEFAULT(/;"	d	file:
+YYLSP_NEEDED	lex/calc/y.tab.c	/^#define YYLSP_NEEDED /;"	d	file:
+YYMALLOC	lex/calc/y.tab.c	/^#   define YYMALLOC /;"	d	file:
+YYMAXDEPTH	lex/calc/y.tab.c	/^# define YYMAXDEPTH /;"	d	file:
+YYMAXUTOK	lex/calc/y.tab.c	/^#define YYMAXUTOK /;"	d	file:
+YYNNTS	lex/calc/y.tab.c	/^#define YYNNTS /;"	d	file:
+YYNRULES	lex/calc/y.tab.c	/^#define YYNRULES /;"	d	file:
+YYNSTATES	lex/calc/y.tab.c	/^#define YYNSTATES /;"	d	file:
+YYNTOKENS	lex/calc/y.tab.c	/^#define YYNTOKENS /;"	d	file:
+YYPACT_NINF	lex/calc/y.tab.c	/^#define YYPACT_NINF /;"	d	file:
+YYPOPSTACK	lex/calc/y.tab.c	/^#define YYPOPSTACK(/;"	d	file:
+YYPURE	lex/calc/y.tab.c	/^#define YYPURE /;"	d	file:
+YYRECOVERING	lex/calc/y.tab.c	/^#define YYRECOVERING(/;"	d	file:
+YYRHSLOC	lex/calc/y.tab.c	/^#define YYRHSLOC(/;"	d	file:
+YYSIZE_MAXIMUM	lex/calc/y.tab.c	/^#define YYSIZE_MAXIMUM /;"	d	file:
+YYSIZE_T	lex/calc/y.tab.c	/^#  define YYSIZE_T /;"	d	file:
+YYSKELETON_NAME	lex/calc/y.tab.c	/^#define YYSKELETON_NAME /;"	d	file:
+YYSTACK_ALLOC	lex/calc/y.tab.c	/^#    define YYSTACK_ALLOC /;"	d	file:
+YYSTACK_ALLOC	lex/calc/y.tab.c	/^#  define YYSTACK_ALLOC /;"	d	file:
+YYSTACK_ALLOC_MAXIMUM	lex/calc/y.tab.c	/^#   define YYSTACK_ALLOC_MAXIMUM /;"	d	file:
+YYSTACK_BYTES	lex/calc/y.tab.c	/^# define YYSTACK_BYTES(/;"	d	file:
+YYSTACK_FREE	lex/calc/y.tab.c	/^#  define YYSTACK_FREE /;"	d	file:
+YYSTACK_FREE	lex/calc/y.tab.c	/^#  define YYSTACK_FREE(/;"	d	file:
+YYSTACK_GAP_MAXIMUM	lex/calc/y.tab.c	/^# define YYSTACK_GAP_MAXIMUM /;"	d	file:
+YYSTACK_RELOCATE	lex/calc/y.tab.c	/^# define YYSTACK_RELOCATE(/;"	d	file:
+YYSTATE	lex/calc/lex.yy.c	/^#define YYSTATE /;"	d	file:
+YYSTATE	lex/lex.yy.c	/^#define YYSTATE /;"	d	file:
+YYSTYPE	lex/calc/y.tab.c	/^typedef int YYSTYPE;$/;"	t	file:
+YYSTYPE	lex/calc/y.tab.h	/^typedef int YYSTYPE;$/;"	t
+YYSTYPE_IS_DECLARED	lex/calc/y.tab.c	/^# define YYSTYPE_IS_DECLARED /;"	d	file:
+YYSTYPE_IS_DECLARED	lex/calc/y.tab.h	/^# define YYSTYPE_IS_DECLARED /;"	d
+YYSTYPE_IS_TRIVIAL	lex/calc/y.tab.c	/^# define YYSTYPE_IS_TRIVIAL /;"	d	file:
+YYSTYPE_IS_TRIVIAL	lex/calc/y.tab.h	/^# define YYSTYPE_IS_TRIVIAL /;"	d
+YYTABLES_NAME	lex/calc/lex.yy.c	/^#define YYTABLES_NAME /;"	d	file:
+YYTABLES_NAME	lex/lex.yy.c	/^#define YYTABLES_NAME /;"	d	file:
+YYTABLE_NINF	lex/calc/y.tab.c	/^#define YYTABLE_NINF /;"	d	file:
+YYTERROR	lex/calc/y.tab.c	/^#define YYTERROR	/;"	d	file:
+YYTOKENTYPE	lex/calc/y.tab.c	/^# define YYTOKENTYPE$/;"	d	file:
+YYTOKENTYPE	lex/calc/y.tab.h	/^# define YYTOKENTYPE$/;"	d
+YYTOKEN_TABLE	lex/calc/y.tab.c	/^# define YYTOKEN_TABLE /;"	d	file:
+YYTRANSLATE	lex/calc/y.tab.c	/^#define YYTRANSLATE(/;"	d	file:
+YYUNDEFTOK	lex/calc/y.tab.c	/^#define YYUNDEFTOK /;"	d	file:
+YYUSE	lex/calc/y.tab.c	/^# define YYUSE(/;"	d	file:
+YY_	lex/calc/y.tab.c	/^#   define YY_(/;"	d	file:
+YY_	lex/calc/y.tab.c	/^#  define YY_(/;"	d	file:
+YY_AT_BOL	lex/calc/lex.yy.c	/^#define YY_AT_BOL(/;"	d	file:
+YY_AT_BOL	lex/lex.yy.c	/^#define YY_AT_BOL(/;"	d	file:
+YY_BREAK	lex/calc/lex.yy.c	/^#define YY_BREAK /;"	d	file:
+YY_BREAK	lex/lex.yy.c	/^#define YY_BREAK /;"	d	file:
+YY_BUFFER_EOF_PENDING	lex/calc/lex.yy.c	/^#define YY_BUFFER_EOF_PENDING /;"	d	file:
+YY_BUFFER_EOF_PENDING	lex/lex.yy.c	/^#define YY_BUFFER_EOF_PENDING /;"	d	file:
+YY_BUFFER_NEW	lex/calc/lex.yy.c	/^#define YY_BUFFER_NEW /;"	d	file:
+YY_BUFFER_NEW	lex/lex.yy.c	/^#define YY_BUFFER_NEW /;"	d	file:
+YY_BUFFER_NORMAL	lex/calc/lex.yy.c	/^#define YY_BUFFER_NORMAL /;"	d	file:
+YY_BUFFER_NORMAL	lex/lex.yy.c	/^#define YY_BUFFER_NORMAL /;"	d	file:
+YY_BUFFER_STATE	lex/calc/lex.yy.c	/^typedef struct yy_buffer_state *YY_BUFFER_STATE;$/;"	t	typeref:struct:yy_buffer_state	file:
+YY_BUFFER_STATE	lex/lex.yy.c	/^typedef struct yy_buffer_state *YY_BUFFER_STATE;$/;"	t	typeref:struct:yy_buffer_state	file:
+YY_BUF_SIZE	lex/calc/lex.yy.c	/^#define YY_BUF_SIZE /;"	d	file:
+YY_BUF_SIZE	lex/lex.yy.c	/^#define YY_BUF_SIZE /;"	d	file:
+YY_CHAR	lex/calc/lex.yy.c	/^typedef unsigned char YY_CHAR;$/;"	t	file:
+YY_CHAR	lex/lex.yy.c	/^typedef unsigned char YY_CHAR;$/;"	t	file:
+YY_CURRENT_BUFFER	lex/calc/lex.yy.c	/^#define YY_CURRENT_BUFFER /;"	d	file:
+YY_CURRENT_BUFFER	lex/lex.yy.c	/^#define YY_CURRENT_BUFFER /;"	d	file:
+YY_CURRENT_BUFFER_LVALUE	lex/calc/lex.yy.c	/^#define YY_CURRENT_BUFFER_LVALUE /;"	d	file:
+YY_CURRENT_BUFFER_LVALUE	lex/lex.yy.c	/^#define YY_CURRENT_BUFFER_LVALUE /;"	d	file:
+YY_DECL	lex/calc/lex.yy.c	/^#define YY_DECL /;"	d	file:
+YY_DECL	lex/lex.yy.c	/^#define YY_DECL /;"	d	file:
+YY_DECL_IS_OURS	lex/calc/lex.yy.c	/^#define YY_DECL_IS_OURS /;"	d	file:
+YY_DECL_IS_OURS	lex/lex.yy.c	/^#define YY_DECL_IS_OURS /;"	d	file:
+YY_DO_BEFORE_ACTION	lex/calc/lex.yy.c	/^#define YY_DO_BEFORE_ACTION /;"	d	file:
+YY_DO_BEFORE_ACTION	lex/lex.yy.c	/^#define YY_DO_BEFORE_ACTION /;"	d	file:
+YY_END_OF_BUFFER	lex/calc/lex.yy.c	/^#define YY_END_OF_BUFFER /;"	d	file:
+YY_END_OF_BUFFER	lex/lex.yy.c	/^#define YY_END_OF_BUFFER /;"	d	file:
+YY_END_OF_BUFFER_CHAR	lex/calc/lex.yy.c	/^#define YY_END_OF_BUFFER_CHAR /;"	d	file:
+YY_END_OF_BUFFER_CHAR	lex/lex.yy.c	/^#define YY_END_OF_BUFFER_CHAR /;"	d	file:
+YY_EXIT_FAILURE	lex/calc/lex.yy.c	/^#define YY_EXIT_FAILURE /;"	d	file:
+YY_EXIT_FAILURE	lex/lex.yy.c	/^#define YY_EXIT_FAILURE /;"	d	file:
+YY_EXTRA_TYPE	lex/calc/lex.yy.c	/^#define YY_EXTRA_TYPE /;"	d	file:
+YY_EXTRA_TYPE	lex/lex.yy.c	/^#define YY_EXTRA_TYPE /;"	d	file:
+YY_FATAL_ERROR	lex/calc/lex.yy.c	/^#define YY_FATAL_ERROR(/;"	d	file:
+YY_FATAL_ERROR	lex/lex.yy.c	/^#define YY_FATAL_ERROR(/;"	d	file:
+YY_FLEX_MAJOR_VERSION	lex/calc/lex.yy.c	/^#define YY_FLEX_MAJOR_VERSION /;"	d	file:
+YY_FLEX_MAJOR_VERSION	lex/lex.yy.c	/^#define YY_FLEX_MAJOR_VERSION /;"	d	file:
+YY_FLEX_MINOR_VERSION	lex/calc/lex.yy.c	/^#define YY_FLEX_MINOR_VERSION /;"	d	file:
+YY_FLEX_MINOR_VERSION	lex/lex.yy.c	/^#define YY_FLEX_MINOR_VERSION /;"	d	file:
+YY_FLEX_SUBMINOR_VERSION	lex/calc/lex.yy.c	/^#define YY_FLEX_SUBMINOR_VERSION /;"	d	file:
+YY_FLEX_SUBMINOR_VERSION	lex/lex.yy.c	/^#define YY_FLEX_SUBMINOR_VERSION /;"	d	file:
+YY_FLUSH_BUFFER	lex/calc/lex.yy.c	/^#define YY_FLUSH_BUFFER /;"	d	file:
+YY_FLUSH_BUFFER	lex/lex.yy.c	/^#define YY_FLUSH_BUFFER /;"	d	file:
+YY_INPUT	lex/calc/lex.yy.c	/^#define YY_INPUT(/;"	d	file:
+YY_INPUT	lex/lex.yy.c	/^#define YY_INPUT(/;"	d	file:
+YY_INT_ALIGNED	lex/calc/lex.yy.c	/^#define  YY_INT_ALIGNED /;"	d	file:
+YY_INT_ALIGNED	lex/lex.yy.c	/^#define  YY_INT_ALIGNED /;"	d	file:
+YY_LESS_LINENO	lex/calc/lex.yy.c	/^    #define YY_LESS_LINENO(/;"	d	file:
+YY_LESS_LINENO	lex/lex.yy.c	/^    #define YY_LESS_LINENO(/;"	d	file:
+YY_LOCATION_PRINT	lex/calc/y.tab.c	/^#  define YY_LOCATION_PRINT(/;"	d	file:
+YY_MORE_ADJ	lex/calc/lex.yy.c	/^#define YY_MORE_ADJ /;"	d	file:
+YY_MORE_ADJ	lex/lex.yy.c	/^#define YY_MORE_ADJ /;"	d	file:
+YY_NEW_FILE	lex/calc/lex.yy.c	/^#define YY_NEW_FILE /;"	d	file:
+YY_NEW_FILE	lex/lex.yy.c	/^#define YY_NEW_FILE /;"	d	file:
+YY_NULL	lex/calc/lex.yy.c	/^#define YY_NULL /;"	d	file:
+YY_NULL	lex/lex.yy.c	/^#define YY_NULL /;"	d	file:
+YY_NUM_RULES	lex/calc/lex.yy.c	/^#define YY_NUM_RULES /;"	d	file:
+YY_NUM_RULES	lex/lex.yy.c	/^#define YY_NUM_RULES /;"	d	file:
+YY_READ_BUF_SIZE	lex/calc/lex.yy.c	/^#define YY_READ_BUF_SIZE /;"	d	file:
+YY_READ_BUF_SIZE	lex/lex.yy.c	/^#define YY_READ_BUF_SIZE /;"	d	file:
+YY_REDUCE_PRINT	lex/calc/y.tab.c	/^# define YY_REDUCE_PRINT(/;"	d	file:
+YY_RESTORE_YY_MORE_OFFSET	lex/calc/lex.yy.c	/^#define YY_RESTORE_YY_MORE_OFFSET$/;"	d	file:
+YY_RESTORE_YY_MORE_OFFSET	lex/lex.yy.c	/^#define YY_RESTORE_YY_MORE_OFFSET$/;"	d	file:
+YY_RULE_SETUP	lex/calc/lex.yy.c	/^#define YY_RULE_SETUP /;"	d	file:
+YY_RULE_SETUP	lex/lex.yy.c	/^#define YY_RULE_SETUP /;"	d	file:
+YY_SC_TO_UI	lex/calc/lex.yy.c	/^#define YY_SC_TO_UI(/;"	d	file:
+YY_SC_TO_UI	lex/lex.yy.c	/^#define YY_SC_TO_UI(/;"	d	file:
+YY_STACK_PRINT	lex/calc/y.tab.c	/^# define YY_STACK_PRINT(/;"	d	file:
+YY_START	lex/calc/lex.yy.c	/^#define YY_START /;"	d	file:
+YY_START	lex/lex.yy.c	/^#define YY_START /;"	d	file:
+YY_START_STACK_INCR	lex/calc/lex.yy.c	/^#define YY_START_STACK_INCR /;"	d	file:
+YY_START_STACK_INCR	lex/lex.yy.c	/^#define YY_START_STACK_INCR /;"	d	file:
+YY_STATE_BUF_SIZE	lex/calc/lex.yy.c	/^#define YY_STATE_BUF_SIZE /;"	d	file:
+YY_STATE_BUF_SIZE	lex/lex.yy.c	/^#define YY_STATE_BUF_SIZE /;"	d	file:
+YY_STATE_EOF	lex/calc/lex.yy.c	/^#define YY_STATE_EOF(/;"	d	file:
+YY_STATE_EOF	lex/lex.yy.c	/^#define YY_STATE_EOF(/;"	d	file:
+YY_STRUCT_YY_BUFFER_STATE	lex/calc/lex.yy.c	/^#define YY_STRUCT_YY_BUFFER_STATE$/;"	d	file:
+YY_STRUCT_YY_BUFFER_STATE	lex/lex.yy.c	/^#define YY_STRUCT_YY_BUFFER_STATE$/;"	d	file:
+YY_SYMBOL_PRINT	lex/calc/y.tab.c	/^# define YY_SYMBOL_PRINT(/;"	d	file:
+YY_TYPEDEF_YY_BUFFER_STATE	lex/calc/lex.yy.c	/^#define YY_TYPEDEF_YY_BUFFER_STATE$/;"	d	file:
+YY_TYPEDEF_YY_BUFFER_STATE	lex/lex.yy.c	/^#define YY_TYPEDEF_YY_BUFFER_STATE$/;"	d	file:
+YY_TYPEDEF_YY_SIZE_T	lex/calc/lex.yy.c	/^#define YY_TYPEDEF_YY_SIZE_T$/;"	d	file:
+YY_TYPEDEF_YY_SIZE_T	lex/lex.yy.c	/^#define YY_TYPEDEF_YY_SIZE_T$/;"	d	file:
+YY_USER_ACTION	lex/calc/lex.yy.c	/^#define YY_USER_ACTION$/;"	d	file:
+YY_USER_ACTION	lex/lex.yy.c	/^#define YY_USER_ACTION$/;"	d	file:
+YY_USE_CONST	lex/calc/lex.yy.c	/^#define YY_USE_CONST$/;"	d	file:
+YY_USE_CONST	lex/lex.yy.c	/^#define YY_USE_CONST$/;"	d	file:
+_STDLIB_H	lex/calc/y.tab.c	/^#      define _STDLIB_H /;"	d	file:
+_STDLIB_H	lex/calc/y.tab.c	/^#    define _STDLIB_H /;"	d	file:
+__STDC_LIMIT_MACROS	lex/calc/lex.yy.c	/^#define __STDC_LIMIT_MACROS /;"	d	file:
+__STDC_LIMIT_MACROS	lex/lex.yy.c	/^#define __STDC_LIMIT_MACROS /;"	d	file:
+add_mode	c/chgmod.c	/^int add_mode(char* pathname,mode_t orimode,mode_t addmode)$/;"	f
+add_mode	c/chmod_test.c	/^int add_mode(char* pathname,mode_t orimode,mode_t addmode)$/;"	f
+alloca	lex/calc/y.tab.c	/^#    define alloca /;"	d	file:
+assume	asm/src/test.asm	/^assume cs:codesg$/;"	l
+check_src	c/copy_big_file.c	/^void check_src(char* filename)$/;"	f
+chg_mod	c/copy_big_file.c	/^void chg_mod(char* filename)$/;"	f
+codesg	asm/src/test.asm	/^codesg segment$/;"	l
+create_big_file	c/copy_big_file.c	/^void create_big_file(char* filename)$/;"	f
+create_tree	c/test.c	/^node* create_tree(int n)$/;"	f
+delete	c/test.c	/^void delete(node* tree,int n)$/;"	f
+delete_node	c/test.c	/^void delete_node(node* del_node,int n)$/;"	f
+do_cmd	c/do_cmd.c	/^int do_cmd(char* cmd_str)$/;"	f
+do_cmd	c/rw/reader.c	/^void do_cmd()$/;"	f
+do_cmd	c/rw/writer.c	/^void do_cmd()$/;"	f
+do_mk_and_chg	c/test_file_depth.c	/^void do_mk_and_chg(int depth)$/;"	f
+e	asm/src/test.asm	/^	e:$/;"	l
+ets	erl/test.erl	/^ets()->$/;"	f	module:test
+executable	c/Makefile	/^executable=test$/;"	m
+expression	lex/calc/calc.y	/^expression:	NUMBER OPERATOR NUMBER$/;"	l
+fac	c/fac.c	/^int fac(int n)$/;"	f
+fd	c/rw/reader.c	/^int fd;$/;"	v
+fd	c/rw/writer.c	/^int fd;$/;"	v
+fib	c/fac.c	/^int fib(int n)$/;"	f
+find	c/test.c	/^node* find(node* tree,int n)$/;"	f
+flex_int16_t	lex/calc/lex.yy.c	/^typedef int16_t flex_int16_t;$/;"	t	file:
+flex_int16_t	lex/calc/lex.yy.c	/^typedef short int flex_int16_t;$/;"	t	file:
+flex_int16_t	lex/lex.yy.c	/^typedef int16_t flex_int16_t;$/;"	t	file:
+flex_int16_t	lex/lex.yy.c	/^typedef short int flex_int16_t;$/;"	t	file:
+flex_int32_t	lex/calc/lex.yy.c	/^typedef int flex_int32_t;$/;"	t	file:
+flex_int32_t	lex/calc/lex.yy.c	/^typedef int32_t flex_int32_t;$/;"	t	file:
+flex_int32_t	lex/lex.yy.c	/^typedef int flex_int32_t;$/;"	t	file:
+flex_int32_t	lex/lex.yy.c	/^typedef int32_t flex_int32_t;$/;"	t	file:
+flex_int8_t	lex/calc/lex.yy.c	/^typedef int8_t flex_int8_t;$/;"	t	file:
+flex_int8_t	lex/calc/lex.yy.c	/^typedef signed char flex_int8_t;$/;"	t	file:
+flex_int8_t	lex/lex.yy.c	/^typedef int8_t flex_int8_t;$/;"	t	file:
+flex_int8_t	lex/lex.yy.c	/^typedef signed char flex_int8_t;$/;"	t	file:
+flex_uint16_t	lex/calc/lex.yy.c	/^typedef uint16_t flex_uint16_t;$/;"	t	file:
+flex_uint16_t	lex/calc/lex.yy.c	/^typedef unsigned short int flex_uint16_t;$/;"	t	file:
+flex_uint16_t	lex/lex.yy.c	/^typedef uint16_t flex_uint16_t;$/;"	t	file:
+flex_uint16_t	lex/lex.yy.c	/^typedef unsigned short int flex_uint16_t;$/;"	t	file:
+flex_uint32_t	lex/calc/lex.yy.c	/^typedef uint32_t flex_uint32_t;$/;"	t	file:
+flex_uint32_t	lex/calc/lex.yy.c	/^typedef unsigned int flex_uint32_t;$/;"	t	file:
+flex_uint32_t	lex/lex.yy.c	/^typedef uint32_t flex_uint32_t;$/;"	t	file:
+flex_uint32_t	lex/lex.yy.c	/^typedef unsigned int flex_uint32_t;$/;"	t	file:
+flex_uint64_t	lex/calc/lex.yy.c	/^typedef uint64_t flex_uint64_t;$/;"	t	file:
+flex_uint64_t	lex/lex.yy.c	/^typedef uint64_t flex_uint64_t;$/;"	t	file:
+flex_uint8_t	lex/calc/lex.yy.c	/^typedef uint8_t flex_uint8_t;$/;"	t	file:
+flex_uint8_t	lex/calc/lex.yy.c	/^typedef unsigned char flex_uint8_t; $/;"	t	file:
+flex_uint8_t	lex/lex.yy.c	/^typedef uint8_t flex_uint8_t;$/;"	t	file:
+flex_uint8_t	lex/lex.yy.c	/^typedef unsigned char flex_uint8_t; $/;"	t	file:
+fmemopen	c/funopen_test.c	/^FILE* fmemopen(void* buf)$/;"	f
+handler	c/sig.c	/^void handler(int sig)$/;"	f
+i_to_b	c/i_to_b.c	/^char* i_to_b(int i)$/;"	f
+insert	c/test.c	/^void insert(node* tree,int n)$/;"	f
+l	erl/test.erl	/^l()->$/;"	f	module:test
+left	c/test.c	/^	node* left;$/;"	m	struct:node	file:
+linenum	lex/lex.yy.c	/^int linenum;$/;"	v
+main	c/cache1.c	/^int main() {$/;"	f
+main	c/cache2.c	/^int main() {$/;"	f
+main	c/chgmod.c	/^int main(int argc,char** argv)$/;"	f
+main	c/chmod_test.c	/^int main(int argc,char** argv)$/;"	f
+main	c/copy_big_file.c	/^int main(int argc,char** argv)$/;"	f
+main	c/do_cmd.c	/^int main()$/;"	f
+main	c/fac.c	/^int main()$/;"	f
+main	c/file_hole.c	/^int main(int argc,char** argv)$/;"	f
+main	c/funopen_test.c	/^int main()$/;"	f
+main	c/pipe_test.c	/^int main(int argc,char** argv)$/;"	f
+main	c/read_dir.c	/^int main(int argc,char** argv)$/;"	f
+main	c/rw/reader.c	/^int main(int argc,char** argv)$/;"	f
+main	c/rw/writer.c	/^int main(int argc,char** argv)$/;"	f
+main	c/sig.c	/^int main(int argc,char** argv)$/;"	f
+main	c/test.c	/^int main()$/;"	f
+main	c/test_acct.c	/^int main(int argc,char** argv)$/;"	f
+main	c/test_file_depth.c	/^int main(int argc,char** argv)$/;"	f
+main	c/tty_test.c	/^int main()$/;"	f
+main	c/umask_test.c	/^int main(int argc,char** argv)$/;"	f
+main	c/unametest.c	/^int main(int argc,char** argv)$/;"	f
+main	lex/calc/y.tab.c	/^int main()$/;"	f
+main	lex/lex.yy.c	/^int main()$/;"	f
+node	c/test.c	/^struct node$/;"	s	file:
+node	c/test.c	/^typedef struct node node;$/;"	t	typeref:struct:node	file:
+objects	c/Makefile	/^objects=test.o$/;"	m
+open_file	c/rw/reader.c	/^int open_file(char* pathname)$/;"	f
+open_file	c/rw/writer.c	/^int open_file(char* pathname)$/;"	f
+parent	c/test.c	/^	node* parent;$/;"	m	struct:node	file:
+pathname	c/rw/reader.c	/^char* pathname;$/;"	v
+pathname	c/rw/writer.c	/^char* pathname;$/;"	v
+pr_fib	c/fac.c	/^void pr_fib(int n)$/;"	f
+read_fd	c/read_dir.c	/^int read_fd(char* pathname)$/;"	f
+read_file	c/rw/reader.c	/^int read_file(int fd)$/;"	f
+readfn	c/funopen_test.c	/^int readfn(void* cookie,char* buf,int size)$/;"	f
+remove_mode	c/chgmod.c	/^int remove_mode(char* pathname,mode_t orimode,mode_t removemode)$/;"	f
+remove_mode	c/chmod_test.c	/^int remove_mode(char* pathname,mode_t orimode,mode_t removemode)$/;"	f
+right	c/test.c	/^	node* right;$/;"	m	struct:node	file:
+run	erl/test.erl	/^run()->$/;"	f	module:test
+s	asm/src/test.asm	/^	s:$/;"	l
+short	lex/calc/y.tab.c	/^# undef short$/;"	d	file:
+showtitle	lex/lex.yy.c	/^int showtitle()$/;"	f
+strrev	c/strrev.c	/^void strrev(char* s)$/;"	f
+test	erl/test.erl	/^-module(test).$/;"	m
+timer	erl/test.erl	/^timer()->$/;"	f	module:test
+traverse	c/test.c	/^void traverse(node* tree)$/;"	f
+traverse_dir	c/read_dir.c	/^void traverse_dir(DIR* dir)$/;"	f
+unput	lex/calc/lex.yy.c	/^#define unput(/;"	d	file:
+unput	lex/lex.yy.c	/^#define unput(/;"	d	file:
+v	c/test.c	/^	int v;$/;"	m	struct:node	file:
+write_file	c/rw/writer.c	/^int write_file(int fd)$/;"	f
+writefn	c/funopen_test.c	/^int writefn(void* cookie,const char* buf,int size)$/;"	f
+yy_accept	lex/calc/lex.yy.c	/^static yyconst flex_int16_t yy_accept[9] =$/;"	v	file:
+yy_accept	lex/lex.yy.c	/^static yyconst flex_int16_t yy_accept[41] =$/;"	v	file:
+yy_at_bol	lex/calc/lex.yy.c	/^	int yy_at_bol;$/;"	m	struct:yy_buffer_state	file:
+yy_at_bol	lex/lex.yy.c	/^	int yy_at_bol;$/;"	m	struct:yy_buffer_state	file:
+yy_base	lex/calc/lex.yy.c	/^static yyconst flex_int16_t yy_base[10] =$/;"	v	file:
+yy_base	lex/lex.yy.c	/^static yyconst flex_int16_t yy_base[42] =$/;"	v	file:
+yy_bs_column	lex/calc/lex.yy.c	/^    int yy_bs_column; \/**< The column count. *\/$/;"	m	struct:yy_buffer_state	file:
+yy_bs_column	lex/lex.yy.c	/^    int yy_bs_column; \/**< The column count. *\/$/;"	m	struct:yy_buffer_state	file:
+yy_bs_lineno	lex/calc/lex.yy.c	/^    int yy_bs_lineno; \/**< The line count. *\/$/;"	m	struct:yy_buffer_state	file:
+yy_bs_lineno	lex/lex.yy.c	/^    int yy_bs_lineno; \/**< The line count. *\/$/;"	m	struct:yy_buffer_state	file:
+yy_buf_pos	lex/calc/lex.yy.c	/^	char *yy_buf_pos;		\/* current position in input buffer *\/$/;"	m	struct:yy_buffer_state	file:
+yy_buf_pos	lex/lex.yy.c	/^	char *yy_buf_pos;		\/* current position in input buffer *\/$/;"	m	struct:yy_buffer_state	file:
+yy_buf_size	lex/calc/lex.yy.c	/^	yy_size_t yy_buf_size;$/;"	m	struct:yy_buffer_state	file:
+yy_buf_size	lex/lex.yy.c	/^	yy_size_t yy_buf_size;$/;"	m	struct:yy_buffer_state	file:
+yy_buffer_stack	lex/calc/lex.yy.c	/^static YY_BUFFER_STATE * yy_buffer_stack = 0; \/**< Stack as an array. *\/$/;"	v	file:
+yy_buffer_stack	lex/lex.yy.c	/^static YY_BUFFER_STATE * yy_buffer_stack = 0; \/**< Stack as an array. *\/$/;"	v	file:
+yy_buffer_stack_max	lex/calc/lex.yy.c	/^static size_t yy_buffer_stack_max = 0; \/**< capacity of stack. *\/$/;"	v	file:
+yy_buffer_stack_max	lex/lex.yy.c	/^static size_t yy_buffer_stack_max = 0; \/**< capacity of stack. *\/$/;"	v	file:
+yy_buffer_stack_top	lex/calc/lex.yy.c	/^static size_t yy_buffer_stack_top = 0; \/**< index of top of stack. *\/$/;"	v	file:
+yy_buffer_stack_top	lex/lex.yy.c	/^static size_t yy_buffer_stack_top = 0; \/**< index of top of stack. *\/$/;"	v	file:
+yy_buffer_state	lex/calc/lex.yy.c	/^struct yy_buffer_state$/;"	s	file:
+yy_buffer_state	lex/lex.yy.c	/^struct yy_buffer_state$/;"	s	file:
+yy_buffer_status	lex/calc/lex.yy.c	/^	int yy_buffer_status;$/;"	m	struct:yy_buffer_state	file:
+yy_buffer_status	lex/lex.yy.c	/^	int yy_buffer_status;$/;"	m	struct:yy_buffer_state	file:
+yy_c_buf_p	lex/calc/lex.yy.c	/^static char *yy_c_buf_p = (char *) 0;$/;"	v	file:
+yy_c_buf_p	lex/lex.yy.c	/^static char *yy_c_buf_p = (char *) 0;$/;"	v	file:
+yy_ch_buf	lex/calc/lex.yy.c	/^	char *yy_ch_buf;		\/* input buffer *\/$/;"	m	struct:yy_buffer_state	file:
+yy_ch_buf	lex/lex.yy.c	/^	char *yy_ch_buf;		\/* input buffer *\/$/;"	m	struct:yy_buffer_state	file:
+yy_chk	lex/calc/lex.yy.c	/^static yyconst flex_int16_t yy_chk[10] =$/;"	v	file:
+yy_chk	lex/lex.yy.c	/^static yyconst flex_int16_t yy_chk[79] =$/;"	v	file:
+yy_create_buffer	lex/calc/lex.yy.c	/^    YY_BUFFER_STATE yy_create_buffer  (FILE * file, int  size )$/;"	f
+yy_create_buffer	lex/lex.yy.c	/^    YY_BUFFER_STATE yy_create_buffer  (FILE * file, int  size )$/;"	f
+yy_def	lex/calc/lex.yy.c	/^static yyconst flex_int16_t yy_def[10] =$/;"	v	file:
+yy_def	lex/lex.yy.c	/^static yyconst flex_int16_t yy_def[42] =$/;"	v	file:
+yy_delete_buffer	lex/calc/lex.yy.c	/^    void yy_delete_buffer (YY_BUFFER_STATE  b )$/;"	f
+yy_delete_buffer	lex/lex.yy.c	/^    void yy_delete_buffer (YY_BUFFER_STATE  b )$/;"	f
+yy_did_buffer_switch_on_eof	lex/calc/lex.yy.c	/^static int yy_did_buffer_switch_on_eof;$/;"	v	file:
+yy_did_buffer_switch_on_eof	lex/lex.yy.c	/^static int yy_did_buffer_switch_on_eof;$/;"	v	file:
+yy_ec	lex/calc/lex.yy.c	/^static yyconst flex_int32_t yy_ec[256] =$/;"	v	file:
+yy_ec	lex/lex.yy.c	/^static yyconst flex_int32_t yy_ec[256] =$/;"	v	file:
+yy_fatal_error	lex/calc/lex.yy.c	/^static void yy_fatal_error (yyconst char* msg )$/;"	f	file:
+yy_fatal_error	lex/lex.yy.c	/^static void yy_fatal_error (yyconst char* msg )$/;"	f	file:
+yy_fill_buffer	lex/calc/lex.yy.c	/^	int yy_fill_buffer;$/;"	m	struct:yy_buffer_state	file:
+yy_fill_buffer	lex/lex.yy.c	/^	int yy_fill_buffer;$/;"	m	struct:yy_buffer_state	file:
+yy_flex_debug	lex/calc/lex.yy.c	/^int yy_flex_debug = 0;$/;"	v
+yy_flex_debug	lex/lex.yy.c	/^int yy_flex_debug = 0;$/;"	v
+yy_flex_strlen	lex/calc/lex.yy.c	/^static int yy_flex_strlen (yyconst char * s )$/;"	f	file:
+yy_flex_strlen	lex/lex.yy.c	/^static int yy_flex_strlen (yyconst char * s )$/;"	f	file:
+yy_flex_strncpy	lex/calc/lex.yy.c	/^static void yy_flex_strncpy (char* s1, yyconst char * s2, int n )$/;"	f	file:
+yy_flex_strncpy	lex/lex.yy.c	/^static void yy_flex_strncpy (char* s1, yyconst char * s2, int n )$/;"	f	file:
+yy_flush_buffer	lex/calc/lex.yy.c	/^    void yy_flush_buffer (YY_BUFFER_STATE  b )$/;"	f
+yy_flush_buffer	lex/lex.yy.c	/^    void yy_flush_buffer (YY_BUFFER_STATE  b )$/;"	f
+yy_get_next_buffer	lex/calc/lex.yy.c	/^static int yy_get_next_buffer (void)$/;"	f	file:
+yy_get_next_buffer	lex/lex.yy.c	/^static int yy_get_next_buffer (void)$/;"	f	file:
+yy_get_previous_state	lex/calc/lex.yy.c	/^    static yy_state_type yy_get_previous_state (void)$/;"	f	file:
+yy_get_previous_state	lex/lex.yy.c	/^    static yy_state_type yy_get_previous_state (void)$/;"	f	file:
+yy_hold_char	lex/calc/lex.yy.c	/^static char yy_hold_char;$/;"	v	file:
+yy_hold_char	lex/lex.yy.c	/^static char yy_hold_char;$/;"	v	file:
+yy_init	lex/calc/lex.yy.c	/^static int yy_init = 0;		\/* whether we need to initialize *\/$/;"	v	file:
+yy_init	lex/lex.yy.c	/^static int yy_init = 0;		\/* whether we need to initialize *\/$/;"	v	file:
+yy_init_buffer	lex/calc/lex.yy.c	/^    static void yy_init_buffer  (YY_BUFFER_STATE  b, FILE * file )$/;"	f	file:
+yy_init_buffer	lex/lex.yy.c	/^    static void yy_init_buffer  (YY_BUFFER_STATE  b, FILE * file )$/;"	f	file:
+yy_init_globals	lex/calc/lex.yy.c	/^static int yy_init_globals (void)$/;"	f	file:
+yy_init_globals	lex/lex.yy.c	/^static int yy_init_globals (void)$/;"	f	file:
+yy_input_file	lex/calc/lex.yy.c	/^	FILE *yy_input_file;$/;"	m	struct:yy_buffer_state	file:
+yy_input_file	lex/lex.yy.c	/^	FILE *yy_input_file;$/;"	m	struct:yy_buffer_state	file:
+yy_is_interactive	lex/calc/lex.yy.c	/^	int yy_is_interactive;$/;"	m	struct:yy_buffer_state	file:
+yy_is_interactive	lex/lex.yy.c	/^	int yy_is_interactive;$/;"	m	struct:yy_buffer_state	file:
+yy_is_our_buffer	lex/calc/lex.yy.c	/^	int yy_is_our_buffer;$/;"	m	struct:yy_buffer_state	file:
+yy_is_our_buffer	lex/lex.yy.c	/^	int yy_is_our_buffer;$/;"	m	struct:yy_buffer_state	file:
+yy_last_accepting_cpos	lex/calc/lex.yy.c	/^static char *yy_last_accepting_cpos;$/;"	v	file:
+yy_last_accepting_cpos	lex/lex.yy.c	/^static char *yy_last_accepting_cpos;$/;"	v	file:
+yy_last_accepting_state	lex/calc/lex.yy.c	/^static yy_state_type yy_last_accepting_state;$/;"	v	file:
+yy_last_accepting_state	lex/lex.yy.c	/^static yy_state_type yy_last_accepting_state;$/;"	v	file:
+yy_load_buffer_state	lex/calc/lex.yy.c	/^static void yy_load_buffer_state  (void)$/;"	f	file:
+yy_load_buffer_state	lex/lex.yy.c	/^static void yy_load_buffer_state  (void)$/;"	f	file:
+yy_meta	lex/calc/lex.yy.c	/^static yyconst flex_int32_t yy_meta[4] =$/;"	v	file:
+yy_meta	lex/lex.yy.c	/^static yyconst flex_int32_t yy_meta[23] =$/;"	v	file:
+yy_n_chars	lex/calc/lex.yy.c	/^	yy_size_t yy_n_chars;$/;"	m	struct:yy_buffer_state	file:
+yy_n_chars	lex/calc/lex.yy.c	/^static yy_size_t yy_n_chars;		\/* number of characters read into yy_ch_buf *\/$/;"	v	file:
+yy_n_chars	lex/lex.yy.c	/^	yy_size_t yy_n_chars;$/;"	m	struct:yy_buffer_state	file:
+yy_n_chars	lex/lex.yy.c	/^static yy_size_t yy_n_chars;		\/* number of characters read into yy_ch_buf *\/$/;"	v	file:
+yy_new_buffer	lex/calc/lex.yy.c	/^#define yy_new_buffer /;"	d	file:
+yy_new_buffer	lex/lex.yy.c	/^#define yy_new_buffer /;"	d	file:
+yy_nxt	lex/calc/lex.yy.c	/^	flex_int32_t yy_nxt;$/;"	m	struct:yy_trans_info	file:
+yy_nxt	lex/calc/lex.yy.c	/^static yyconst flex_int16_t yy_nxt[10] =$/;"	v	file:
+yy_nxt	lex/lex.yy.c	/^	flex_int32_t yy_nxt;$/;"	m	struct:yy_trans_info	file:
+yy_nxt	lex/lex.yy.c	/^static yyconst flex_int16_t yy_nxt[79] =$/;"	v	file:
+yy_reduce_print	lex/calc/y.tab.c	/^yy_reduce_print (YYSTYPE *yyvsp, int yyrule)$/;"	f	file:
+yy_scan_buffer	lex/calc/lex.yy.c	/^YY_BUFFER_STATE yy_scan_buffer  (char * base, yy_size_t  size )$/;"	f
+yy_scan_buffer	lex/lex.yy.c	/^YY_BUFFER_STATE yy_scan_buffer  (char * base, yy_size_t  size )$/;"	f
+yy_scan_bytes	lex/calc/lex.yy.c	/^YY_BUFFER_STATE yy_scan_bytes  (yyconst char * yybytes, yy_size_t  _yybytes_len )$/;"	f
+yy_scan_bytes	lex/lex.yy.c	/^YY_BUFFER_STATE yy_scan_bytes  (yyconst char * yybytes, yy_size_t  _yybytes_len )$/;"	f
+yy_scan_string	lex/calc/lex.yy.c	/^YY_BUFFER_STATE yy_scan_string (yyconst char * yystr )$/;"	f
+yy_scan_string	lex/lex.yy.c	/^YY_BUFFER_STATE yy_scan_string (yyconst char * yystr )$/;"	f
+yy_set_bol	lex/calc/lex.yy.c	/^#define yy_set_bol(/;"	d	file:
+yy_set_bol	lex/lex.yy.c	/^#define yy_set_bol(/;"	d	file:
+yy_set_interactive	lex/calc/lex.yy.c	/^#define yy_set_interactive(/;"	d	file:
+yy_set_interactive	lex/lex.yy.c	/^#define yy_set_interactive(/;"	d	file:
+yy_size_t	lex/calc/lex.yy.c	/^typedef size_t yy_size_t;$/;"	t	file:
+yy_size_t	lex/lex.yy.c	/^typedef size_t yy_size_t;$/;"	t	file:
+yy_stack_print	lex/calc/y.tab.c	/^yy_stack_print (yytype_int16 *bottom, yytype_int16 *top)$/;"	f	file:
+yy_start	lex/calc/lex.yy.c	/^static int yy_start = 0;	\/* start state number *\/$/;"	v	file:
+yy_start	lex/lex.yy.c	/^static int yy_start = 0;	\/* start state number *\/$/;"	v	file:
+yy_state_type	lex/calc/lex.yy.c	/^typedef int yy_state_type;$/;"	t	file:
+yy_state_type	lex/lex.yy.c	/^typedef int yy_state_type;$/;"	t	file:
+yy_switch_to_buffer	lex/calc/lex.yy.c	/^    void yy_switch_to_buffer  (YY_BUFFER_STATE  new_buffer )$/;"	f
+yy_switch_to_buffer	lex/lex.yy.c	/^    void yy_switch_to_buffer  (YY_BUFFER_STATE  new_buffer )$/;"	f
+yy_symbol_print	lex/calc/y.tab.c	/^yy_symbol_print (FILE *yyoutput, int yytype, YYSTYPE const * const yyvaluep)$/;"	f	file:
+yy_symbol_value_print	lex/calc/y.tab.c	/^yy_symbol_value_print (FILE *yyoutput, int yytype, YYSTYPE const * const yyvaluep)$/;"	f	file:
+yy_trans_info	lex/calc/lex.yy.c	/^struct yy_trans_info$/;"	s	file:
+yy_trans_info	lex/lex.yy.c	/^struct yy_trans_info$/;"	s	file:
+yy_try_NUL_trans	lex/calc/lex.yy.c	/^    static yy_state_type yy_try_NUL_trans  (yy_state_type yy_current_state )$/;"	f	file:
+yy_try_NUL_trans	lex/lex.yy.c	/^    static yy_state_type yy_try_NUL_trans  (yy_state_type yy_current_state )$/;"	f	file:
+yy_verify	lex/calc/lex.yy.c	/^	flex_int32_t yy_verify;$/;"	m	struct:yy_trans_info	file:
+yy_verify	lex/lex.yy.c	/^	flex_int32_t yy_verify;$/;"	m	struct:yy_trans_info	file:
+yyalloc	lex/calc/lex.yy.c	/^void *yyalloc (yy_size_t  size )$/;"	f
+yyalloc	lex/calc/y.tab.c	/^union yyalloc$/;"	u	file:
+yyalloc	lex/lex.yy.c	/^void *yyalloc (yy_size_t  size )$/;"	f
+yychar	lex/calc/y.tab.c	/^int yychar;$/;"	v
+yycheck	lex/calc/y.tab.c	/^static const yytype_uint8 yycheck[] =$/;"	v	file:
+yyclearin	lex/calc/y.tab.c	/^#define yyclearin	/;"	d	file:
+yyconst	lex/calc/lex.yy.c	/^#define yyconst /;"	d	file:
+yyconst	lex/calc/lex.yy.c	/^#define yyconst$/;"	d	file:
+yyconst	lex/lex.yy.c	/^#define yyconst /;"	d	file:
+yyconst	lex/lex.yy.c	/^#define yyconst$/;"	d	file:
+yydebug	lex/calc/y.tab.c	/^int yydebug;$/;"	v
+yydefact	lex/calc/y.tab.c	/^static const yytype_uint8 yydefact[] =$/;"	v	file:
+yydefgoto	lex/calc/y.tab.c	/^static const yytype_int8 yydefgoto[] =$/;"	v	file:
+yydestruct	lex/calc/y.tab.c	/^yydestruct (const char *yymsg, int yytype, YYSTYPE *yyvaluep)$/;"	f	file:
+yyensure_buffer_stack	lex/calc/lex.yy.c	/^static void yyensure_buffer_stack (void)$/;"	f	file:
+yyensure_buffer_stack	lex/lex.yy.c	/^static void yyensure_buffer_stack (void)$/;"	f	file:
+yyerrok	lex/calc/y.tab.c	/^#define yyerrok	/;"	d	file:
+yyerror	lex/calc/lex.yy.c	/^int yyerror(char* err)$/;"	f
+yyfree	lex/calc/lex.yy.c	/^void yyfree (void * ptr )$/;"	f
+yyfree	lex/lex.yy.c	/^void yyfree (void * ptr )$/;"	f
+yyget_debug	lex/calc/lex.yy.c	/^int yyget_debug  (void)$/;"	f
+yyget_debug	lex/lex.yy.c	/^int yyget_debug  (void)$/;"	f
+yyget_in	lex/calc/lex.yy.c	/^FILE *yyget_in  (void)$/;"	f
+yyget_in	lex/lex.yy.c	/^FILE *yyget_in  (void)$/;"	f
+yyget_leng	lex/calc/lex.yy.c	/^yy_size_t yyget_leng  (void)$/;"	f
+yyget_leng	lex/lex.yy.c	/^yy_size_t yyget_leng  (void)$/;"	f
+yyget_lineno	lex/calc/lex.yy.c	/^int yyget_lineno  (void)$/;"	f
+yyget_lineno	lex/lex.yy.c	/^int yyget_lineno  (void)$/;"	f
+yyget_out	lex/calc/lex.yy.c	/^FILE *yyget_out  (void)$/;"	f
+yyget_out	lex/lex.yy.c	/^FILE *yyget_out  (void)$/;"	f
+yyget_text	lex/calc/lex.yy.c	/^char *yyget_text  (void)$/;"	f
+yyget_text	lex/lex.yy.c	/^char *yyget_text  (void)$/;"	f
+yyin	lex/calc/lex.yy.c	/^FILE *yyin = (FILE *) 0, *yyout = (FILE *) 0;$/;"	v
+yyin	lex/lex.yy.c	/^FILE *yyin = (FILE *) 0, *yyout = (FILE *) 0;$/;"	v
+yyinput	lex/calc/lex.yy.c	/^    static int yyinput (void)$/;"	f	file:
+yyinput	lex/lex.yy.c	/^    static int yyinput (void)$/;"	f	file:
+yyleng	lex/calc/lex.yy.c	/^yy_size_t yyleng;$/;"	v
+yyleng	lex/lex.yy.c	/^yy_size_t yyleng;$/;"	v
+yyless	lex/calc/lex.yy.c	/^#define yyless(/;"	d	file:
+yyless	lex/calc/lex.yy.c	/^#undef yyless$/;"	d	file:
+yyless	lex/lex.yy.c	/^#define yyless(/;"	d	file:
+yyless	lex/lex.yy.c	/^#undef yyless$/;"	d	file:
+yylex_destroy	lex/calc/lex.yy.c	/^int yylex_destroy  (void)$/;"	f
+yylex_destroy	lex/lex.yy.c	/^int yylex_destroy  (void)$/;"	f
+yylineno	lex/calc/lex.yy.c	/^int yylineno = 1;$/;"	v
+yylineno	lex/lex.yy.c	/^int yylineno = 1;$/;"	v
+yylval	lex/calc/y.tab.c	/^YYSTYPE yylval;$/;"	v
+yymore	lex/calc/lex.yy.c	/^#define yymore(/;"	d	file:
+yymore	lex/lex.yy.c	/^#define yymore(/;"	d	file:
+yynerrs	lex/calc/y.tab.c	/^int yynerrs;$/;"	v
+yyout	lex/calc/lex.yy.c	/^FILE *yyin = (FILE *) 0, *yyout = (FILE *) 0;$/;"	v
+yyout	lex/lex.yy.c	/^FILE *yyin = (FILE *) 0, *yyout = (FILE *) 0;$/;"	v
+yypact	lex/calc/y.tab.c	/^static const yytype_int8 yypact[] =$/;"	v	file:
+yyparse	lex/calc/y.tab.c	/^yyparse (void *YYPARSE_PARAM)$/;"	f
+yypgoto	lex/calc/y.tab.c	/^static const yytype_int8 yypgoto[] =$/;"	v	file:
+yypop_buffer_state	lex/calc/lex.yy.c	/^void yypop_buffer_state (void)$/;"	f
+yypop_buffer_state	lex/lex.yy.c	/^void yypop_buffer_state (void)$/;"	f
+yyprhs	lex/calc/y.tab.c	/^static const yytype_uint8 yyprhs[] =$/;"	v	file:
+yypush_buffer_state	lex/calc/lex.yy.c	/^void yypush_buffer_state (YY_BUFFER_STATE new_buffer )$/;"	f
+yypush_buffer_state	lex/lex.yy.c	/^void yypush_buffer_state (YY_BUFFER_STATE new_buffer )$/;"	f
+yyr1	lex/calc/y.tab.c	/^static const yytype_uint8 yyr1[] =$/;"	v	file:
+yyr2	lex/calc/y.tab.c	/^static const yytype_uint8 yyr2[] =$/;"	v	file:
+yyrealloc	lex/calc/lex.yy.c	/^void *yyrealloc  (void * ptr, yy_size_t  size )$/;"	f
+yyrealloc	lex/lex.yy.c	/^void *yyrealloc  (void * ptr, yy_size_t  size )$/;"	f
+yyrestart	lex/calc/lex.yy.c	/^    void yyrestart  (FILE * input_file )$/;"	f
+yyrestart	lex/lex.yy.c	/^    void yyrestart  (FILE * input_file )$/;"	f
+yyrhs	lex/calc/y.tab.c	/^static const yytype_int8 yyrhs[] =$/;"	v	file:
+yyrline	lex/calc/y.tab.c	/^static const yytype_uint8 yyrline[] =$/;"	v	file:
+yyset_debug	lex/calc/lex.yy.c	/^void yyset_debug (int  bdebug )$/;"	f
+yyset_debug	lex/lex.yy.c	/^void yyset_debug (int  bdebug )$/;"	f
+yyset_in	lex/calc/lex.yy.c	/^void yyset_in (FILE *  in_str )$/;"	f
+yyset_in	lex/lex.yy.c	/^void yyset_in (FILE *  in_str )$/;"	f
+yyset_lineno	lex/calc/lex.yy.c	/^void yyset_lineno (int  line_number )$/;"	f
+yyset_lineno	lex/lex.yy.c	/^void yyset_lineno (int  line_number )$/;"	f
+yyset_out	lex/calc/lex.yy.c	/^void yyset_out (FILE *  out_str )$/;"	f
+yyset_out	lex/lex.yy.c	/^void yyset_out (FILE *  out_str )$/;"	f
+yyss	lex/calc/y.tab.c	/^  yytype_int16 yyss;$/;"	m	union:yyalloc	file:
+yystos	lex/calc/y.tab.c	/^static const yytype_uint8 yystos[] =$/;"	v	file:
+yystpcpy	lex/calc/y.tab.c	/^#   define yystpcpy /;"	d	file:
+yystpcpy	lex/calc/y.tab.c	/^yystpcpy (char *yydest, const char *yysrc)$/;"	f	file:
+yystrlen	lex/calc/y.tab.c	/^#   define yystrlen /;"	d	file:
+yystrlen	lex/calc/y.tab.c	/^yystrlen (const char *yystr)$/;"	f	file:
+yystype	lex/calc/y.tab.c	/^# define yystype /;"	d	file:
+yystype	lex/calc/y.tab.h	/^# define yystype /;"	d
+yysyntax_error	lex/calc/y.tab.c	/^yysyntax_error (char *yyresult, int yystate, int yychar)$/;"	f	file:
+yytable	lex/calc/y.tab.c	/^static const yytype_uint8 yytable[] =$/;"	v	file:
+yyterminate	lex/calc/lex.yy.c	/^#define yyterminate(/;"	d	file:
+yyterminate	lex/lex.yy.c	/^#define yyterminate(/;"	d	file:
+yytext	lex/calc/lex.yy.c	/^char *yytext;$/;"	v
+yytext	lex/lex.yy.c	/^char *yytext;$/;"	v
+yytext_ptr	lex/calc/lex.yy.c	/^#define yytext_ptr /;"	d	file:
+yytext_ptr	lex/lex.yy.c	/^#define yytext_ptr /;"	d	file:
+yytname	lex/calc/y.tab.c	/^static const char *const yytname[] =$/;"	v	file:
+yytnamerr	lex/calc/y.tab.c	/^yytnamerr (char *yyres, const char *yystr)$/;"	f	file:
+yytokentype	lex/calc/y.tab.c	/^   enum yytokentype {$/;"	g	file:
+yytokentype	lex/calc/y.tab.h	/^   enum yytokentype {$/;"	g
+yytoknum	lex/calc/y.tab.c	/^static const yytype_uint16 yytoknum[] =$/;"	v	file:
+yytranslate	lex/calc/y.tab.c	/^static const yytype_uint8 yytranslate[] =$/;"	v	file:
+yytype_int16	lex/calc/y.tab.c	/^typedef YYTYPE_INT16 yytype_int16;$/;"	t	file:
+yytype_int16	lex/calc/y.tab.c	/^typedef short int yytype_int16;$/;"	t	file:
+yytype_int8	lex/calc/y.tab.c	/^typedef YYTYPE_INT8 yytype_int8;$/;"	t	file:
+yytype_int8	lex/calc/y.tab.c	/^typedef short int yytype_int8;$/;"	t	file:
+yytype_int8	lex/calc/y.tab.c	/^typedef signed char yytype_int8;$/;"	t	file:
+yytype_uint16	lex/calc/y.tab.c	/^typedef YYTYPE_UINT16 yytype_uint16;$/;"	t	file:
+yytype_uint16	lex/calc/y.tab.c	/^typedef unsigned short int yytype_uint16;$/;"	t	file:
+yytype_uint8	lex/calc/y.tab.c	/^typedef YYTYPE_UINT8 yytype_uint8;$/;"	t	file:
+yytype_uint8	lex/calc/y.tab.c	/^typedef unsigned char yytype_uint8;$/;"	t	file:
+yyunput	lex/calc/lex.yy.c	/^    static void yyunput (int c, register char * yy_bp )$/;"	f	file:
+yyunput	lex/lex.yy.c	/^    static void yyunput (int c, register char * yy_bp )$/;"	f	file:
+yyvs	lex/calc/y.tab.c	/^  YYSTYPE yyvs;$/;"	m	union:yyalloc	file:
+yywrap	lex/calc/lex.yy.c	/^int yywrap()$/;"	f
+yywrap	lex/lex.yy.c	/^int yywrap()$/;"	f
