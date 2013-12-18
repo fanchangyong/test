@@ -4,4 +4,4 @@ tags
 *.beam
 *.dump
 a.out
-vim/code/
+vim/*
