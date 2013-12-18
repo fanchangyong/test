@@ -1,0 +1,5 @@
+#!/usr/bin/env escript
+%% vim: set ft=erlang:
+
+main(Args)->
+	io:format("Args:~p~n",[Args]);

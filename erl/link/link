@@ -1,0 +1,18 @@
+#!/usr/bin/env escript
+
+-compile(export_all).
+
+run(Reason)->
+	Pid=spawn(fun worker/0),
+	timer:sleep(1000),
+	exit(Pid,Reason).
+
+worker()->
+	register(worker,self()),
+	%%exit(normal),
+	io:format("whereis me:~p~n",[whereis(worker)]),
+	process_flag(trap_exit,true),
+	receive
+		Msg->
+			io:format("Msg:~p~n",[Msg])
+	end.
