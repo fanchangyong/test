@@ -12,6 +12,8 @@ int start_tcp_server(unsigned short port,int* server_sock);
 char* get_sock_addr(int sock);
 unsigned short get_sock_port(int sock);
 
+unsigned short get_peer_port(int sock);
+char* get_peer_addr(int sock);
 
 // UTILS
 int set_reuse_addr(int sock);

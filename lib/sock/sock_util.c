@@ -43,7 +43,6 @@ int do_accept(int sock)
 int start_tcp_server(unsigned short port,int* server_sock)
 {
 	int sock=create_tcp_sock();
-	printf("sock is:%d\n",sock);
 	if(sock==-1)
 	{
 		return -1;
@@ -56,7 +55,6 @@ int start_tcp_server(unsigned short port,int* server_sock)
 	{
 		return -1;
 	}
-	printf("bind socuccess\n");
 	if(listen(sock,5)==-1)
 	{
 		return -1;
@@ -93,7 +91,7 @@ char* get_sock_addr(int sock)
 {
 	struct sockaddr_in client_addr;
 	socklen_t addr_len;
-	if(-1==getpeername(sock,(struct sockaddr*)&client_addr,&addr_len))
+	if(-1==getsockname(sock,(struct sockaddr*)&client_addr,&addr_len))
 	{
 		perror("getpeername error");
 		return "";
@@ -106,11 +104,37 @@ unsigned short get_sock_port(int sock)
 {
 	struct sockaddr_in client_addr;
 	socklen_t addr_len;
-	if(-1==getpeername(sock,(struct sockaddr*)&client_addr,&addr_len))
+	if(-1==getsockname(sock,(struct sockaddr*)&client_addr,&addr_len))
 	{
 		perror("getpeername port error");
 		return -1;
 	}
 
-	return client_addr.sin_port;
+	return htons(client_addr.sin_port);
+}
+
+char* get_peer_addr(int sock)
+{
+	struct sockaddr_in client_addr;
+	socklen_t addr_len;
+	if(-1==getsockname(sock,(struct sockaddr*)&client_addr,&addr_len))
+	{
+		perror("getpeername error");
+		return "";
+	}
+
+	return inet_ntoa(client_addr.sin_addr);
+}
+
+unsigned short get_peer_port(int sock)
+{
+	struct sockaddr_in client_addr;
+	socklen_t addr_len;
+	if(-1==getsockname(sock,(struct sockaddr*)&client_addr,&addr_len))
+	{
+		perror("getpeername port error");
+		return -1;
+	}
+
+	return htons(client_addr.sin_port);
 }

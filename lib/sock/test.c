@@ -52,6 +52,7 @@ int main()
 	char* str_addr=get_sock_addr(client_sock);
 	unsigned short port=get_sock_port(client_sock);
 	printf("client addr:%s:%hu\n",str_addr,port);
+	printf("server addr:%s:%hu\n",get_sock_addr(sock),get_sock_port(sock));
 
 	// write something to client
 	char buf[1024];
