@@ -90,7 +90,7 @@ int set_reuse_addr(int sock)
 char* get_sock_addr(int sock)
 {
 	struct sockaddr_in client_addr;
-	socklen_t addr_len;
+	socklen_t addr_len=sizeof(struct sockaddr_in);
 	if(-1==getsockname(sock,(struct sockaddr*)&client_addr,&addr_len))
 	{
 		perror("getpeername error");
@@ -103,7 +103,7 @@ char* get_sock_addr(int sock)
 unsigned short get_sock_port(int sock)
 {
 	struct sockaddr_in client_addr;
-	socklen_t addr_len;
+	socklen_t addr_len=sizeof(struct sockaddr_in);
 	if(-1==getsockname(sock,(struct sockaddr*)&client_addr,&addr_len))
 	{
 		perror("getpeername port error");
@@ -116,7 +116,7 @@ unsigned short get_sock_port(int sock)
 char* get_peer_addr(int sock)
 {
 	struct sockaddr_in client_addr;
-	socklen_t addr_len;
+	socklen_t addr_len=sizeof(struct sockaddr_in);
 	if(-1==getpeername(sock,(struct sockaddr*)&client_addr,&addr_len))
 	{
 		perror("getpeername error");
@@ -129,7 +129,7 @@ char* get_peer_addr(int sock)
 unsigned short get_peer_port(int sock)
 {
 	struct sockaddr_in client_addr;
-	socklen_t addr_len;
+	socklen_t addr_len=sizeof(struct sockaddr_in);
 	if(-1==getpeername(sock,(struct sockaddr*)&client_addr,&addr_len))
 	{
 		perror("getpeername port error");
