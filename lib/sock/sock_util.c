@@ -117,7 +117,7 @@ char* get_peer_addr(int sock)
 {
 	struct sockaddr_in client_addr;
 	socklen_t addr_len;
-	if(-1==getsockname(sock,(struct sockaddr*)&client_addr,&addr_len))
+	if(-1==getpeername(sock,(struct sockaddr*)&client_addr,&addr_len))
 	{
 		perror("getpeername error");
 		return "";
@@ -130,7 +130,7 @@ unsigned short get_peer_port(int sock)
 {
 	struct sockaddr_in client_addr;
 	socklen_t addr_len;
-	if(-1==getsockname(sock,(struct sockaddr*)&client_addr,&addr_len))
+	if(-1==getpeername(sock,(struct sockaddr*)&client_addr,&addr_len))
 	{
 		perror("getpeername port error");
 		return -1;
