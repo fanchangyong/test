@@ -54,6 +54,9 @@ int main()
 	printf("client addr:%s:%hu\n",str_addr,port);
 	printf("server addr:%s:%hu\n",get_sock_addr(sock),get_sock_port(sock));
 
+	printf("client peer:%s:%hu\n",get_peer_addr(client_sock),get_peer_port(client_sock));
+	printf("server peer:%s:%hu\n",get_peer_addr(sock),get_peer_port(sock));
+
 	// write something to client
 	char buf[1024];
 	bzero(buf,1024);

@@ -1,6 +1,7 @@
 #include "sock_util.h"
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /**********************************
  * for server
@@ -8,7 +9,7 @@
 
 int create_tcp_sock()
 {
-	return socket(PF_INET,SOCK_STREAM,0);
+	return socket(AF_INET,SOCK_STREAM,0);
 }
 
 int bind_by_port(int sock,unsigned short port)
@@ -27,9 +28,9 @@ int do_accept(int sock)
 	struct sockaddr_in sockaddr;
 	socklen_t len;
 	int client_sock;
-	struct sockaddr_in tmp_addr;
-	socklen_t tmp_len;
-	if((client_sock=accept(sock,(struct sockaddr*)&tmp_addr,&tmp_len))==-1)
+	struct sockaddr_in *tmp_addr=(struct sockaddr_in*)malloc(sizeof(struct sockaddr_in));
+	socklen_t *tmp_len=malloc(sizeof(socklen_t));
+	if((client_sock=accept(sock,(struct sockaddr*)tmp_addr,tmp_len))==-1)
 	{
 		printf("accept error\n");
 		return -1;
@@ -93,7 +94,7 @@ char* get_sock_addr(int sock)
 	socklen_t addr_len=sizeof(struct sockaddr_in);
 	if(-1==getsockname(sock,(struct sockaddr*)&client_addr,&addr_len))
 	{
-		perror("getpeername error");
+		perror("getsockname error");
 		return "";
 	}
 
@@ -106,7 +107,7 @@ unsigned short get_sock_port(int sock)
 	socklen_t addr_len=sizeof(struct sockaddr_in);
 	if(-1==getsockname(sock,(struct sockaddr*)&client_addr,&addr_len))
 	{
-		perror("getpeername port error");
+		perror("getsockname port error");
 		return -1;
 	}
 
