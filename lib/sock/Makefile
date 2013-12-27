@@ -1,5 +1,12 @@
-objs=sock_util.o test.o
-test:$(objs)
+testobjs=sock_util.o test.o
+clientobjs=sock_util.o client.o
+
+all:test client
+
+test:$(testobjs)
+	cc -o $@ $^
+
+client:$(clientobjs)
 	cc -o $@ $^
 
 .c.o:
@@ -7,4 +14,4 @@ test:$(objs)
 
 
 clean:
-	rm -f $(objs) test
+	rm -f $(clientobjs) $(testobjs) test

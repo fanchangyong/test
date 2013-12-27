@@ -6,37 +6,6 @@
 
 #define LISTEN_PORT 8888
 
-void print_byte(void* ptr,int len)
-{
-	int i;
-	for(i=0;i<len;++i)
-		printf("%hhd\t",((char*)ptr)[i]);
-	printf("\n");
-}
-
-void print_char(char* str,int len)
-{
-	int i;
-	for(i=0;i<len;++i)
-		printf("%c,",str[i]);
-	printf("\n");
-}
-
-void num_to_str(int n)
-{
-	char str[1024];
-	bzero(str,1024);
-	int i=0;
-	int tmp=0;
-	while(n>0)
-	{
-		tmp=n % 10;
-		str[i]=tmp+'0';
-		n=n/10;
-		++i;
-	}
-	printf("str:%s\n",str);
-}
 
 int main()
 {
@@ -48,22 +17,30 @@ int main()
 		return -1;
 	}
 
-	printf("sock:%d,client sock:%d\n",sock,client_sock);
-	char* str_addr=get_sock_addr(client_sock);
-	unsigned short port=get_sock_port(client_sock);
-	printf("client addr:%s:%hu\n",str_addr,port);
-	printf("server addr:%s:%hu\n",get_sock_addr(sock),get_sock_port(sock));
-
-	printf("client peer:%s:%hu\n",get_peer_addr(client_sock),get_peer_port(client_sock));
-	printf("server peer:%s:%hu\n",get_peer_addr(sock),get_peer_port(sock));
-
+	printf("client addr is:%s:%hu\n",get_peer_addr(client_sock),get_peer_port(client_sock));
+	dup2(client_sock,STDIN_FILENO);
 	// write something to client
-	char buf[1024];
-	bzero(buf,1024);
-	strcpy(buf,"hello");
-	write(client_sock,buf,strlen(buf)+1);
+	for(;;)
+	{
+		char buf[1024];
+		ssize_t reat;
+		if((reat=read(STDIN_FILENO,buf,1024))<0)
+		{
+			perror("read");
+			break;
+		}
+		else if(reat==0)
+		{
+			printf("reading done\n");
+			break;
+		}
+		else
+		{
+			printf("I have read:%s",buf);
+			//write(STDOUT_FILENO,buf,reat);
+		}
+	}
 	
-	getchar();
 	
 	return 0;
 }

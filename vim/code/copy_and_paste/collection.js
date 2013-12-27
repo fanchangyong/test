@@ -8,3 +8,4 @@
 ***/
 collection = getCollection();
 process(somethingInTheWay, target);
+foo;ls

@@ -61,7 +61,6 @@ int start_tcp_server(unsigned short port,int* server_sock)
 		return -1;
 	}
 
-	printf("listen success\n");
 	int client_sock;
 	if((client_sock=do_accept(sock))==-1)
 	{
@@ -75,7 +74,27 @@ int start_tcp_server(unsigned short port,int* server_sock)
  * for client
  *********************************/
 
+int connect_to(int sock,char* str_addr,unsigned short port)
+{
+	struct sockaddr_in addr;
+	bzero(&addr,sizeof(struct sockaddr_in));
+	addr.sin_family=AF_INET;
+	addr.sin_addr.s_addr=inet_addr(str_addr);
+	addr.sin_port=htons(port);
+	socklen_t len=sizeof(struct sockaddr_in);
+	return connect(sock,(struct sockaddr*)&addr,len);
+}
 
+
+int start_tcp_client(char* str_addr,unsigned short port)
+{
+	int sock=create_tcp_sock();
+	if(-1==connect_to(sock,str_addr,port))
+	{
+		return -1;
+	}
+	return sock;
+}
 
 
 /**********************************

@@ -8,6 +8,11 @@ int do_accept(int sock);
 
 int start_tcp_server(unsigned short port,int* server_sock);
 
+// API FOR CLIENT
+int connect_to(int sock,char* str_addr,unsigned short port);
+
+int start_tcp_client(char* str_addr,unsigned short port);
+
 //IP ADDRESS MANIPULATION
 char* get_sock_addr(int sock);
 unsigned short get_sock_port(int sock);
