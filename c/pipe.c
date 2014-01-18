@@ -29,23 +29,19 @@ int main()
 	else if(pid==0)
 	{
 		// child
-		printf("fd in child:%d,%d\n",fd[0],fd[1]);
-		close(fd[0]);
-		close(fd[1]);
+		if(-1==close(fd[0]))
+			perror("close");
+		if(-1==close(fd[1]))
+			perror("close");
 	}
 	else if(pid>0)
 	{
-		signal(SIGPIPE,handler);
-		printf("fd in parent:%d,%d\n",fd[0],fd[1]);
-		char rbuf[1024];
-		printf("to read from pipe\n");
-		int ret=read(fd[0],rbuf,sizeof(rbuf));
-		printf("ret :%d\n",ret);
+		//signal(SIGPIPE,handler);
 		char buf[]="hello";
-		if(-1==write(fd[1],buf,sizeof(buf)))
-		{
-			perror("write");
-		}
+		if(-1==close(fd[0]))
+			perror("close");
+		int ret=write(fd[1],buf,sizeof(buf)-1);
+		printf("ret=%d\n",ret);
 		printf("press any key...");
 		getchar();
 	}
