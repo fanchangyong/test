@@ -7,64 +7,42 @@
 
 // ps -ef|grep bash|nl
 
+void handler(int sig)
+{
+	printf("sig:%d\n",sig);
+}
+
 int main()
 {
-	int fda[2];
-	int fdb[2];
-	pipe(fda);
-	pipe(fdb);
-
-	pid_t pid1,pid2,pid3;
-
-	if((pid1=fork())==0)
+	int fd[2];
+	if(pipe(fd)<0)
 	{
-		// ps -ef
-		// for output
-		close(fda[0]);
-		dup2(fda[1],STDOUT_FILENO);
-
-		char* args[]={"ls","/",NULL};
-		char cmd[]="/bin/ls";
-		execv(cmd,args);
-		perror("execv1");
+		perror("pipe");
+		return 1;
 	}
-
-	if((pid2=fork())==0)
+	pid_t pid=fork();
+	if(pid<0)
 	{
-		// grep bash
-		// for input
-		close(fda[1]);
-		dup2(fda[0],STDIN_FILENO);
-
-		// for output
-		close(fdb[0]);
-		dup2(fdb[1],STDOUT_FILENO);
-
-		char* args[]={"grep","bash",NULL};
-		char cmd[]="/usr/bin/grep";
-		execv(cmd,args);
-		perror("execv2");
-
+		perror("fork");
+		return 1;
 	}
-
-	if((pid3=fork())==0)
+	else if(pid==0)
 	{
-		// nl
-		// for input
-		close(fdb[1]);
-		dup2(fdb[0],STDIN_FILENO);
-
-		char* args[]={"nl",NULL};
-		char cmd[]="/usr/bin/nl";
-		execv(cmd,args);
-		perror("execv3");
+		// child
+		close(fd[0]);
+		close(fd[1]);
 	}
-
-	int i;
-	for(i=0;i<3;++i)
+	else if(pid>0)
 	{
-		int stat;
-		pid_t pid=wait(&stat);
-		printf("pid:%d,stat:%d\n",pid,stat);
+		signal(SIGPIPE,handler);
+		close(fd[0]);
+		char buf[]="hello";
+		if(-1==write(fd[1],buf,sizeof(buf)))
+		{
+			perror("write");
+		}
+		printf("press any key...");
+		getchar();
 	}
+	return 0;
 }
