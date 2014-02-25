@@ -67,12 +67,14 @@
       know about them.  */
    enum yytokentype {
      NUMBER = 258,
-     OPERATOR = 259
+     OPERATOR = 259,
+     EOL = 260
    };
 #endif
 /* Tokens.  */
 #define NUMBER 258
 #define OPERATOR 259
+#define EOL 260
 
 
 
@@ -80,7 +82,9 @@
 /* Copy the first part of user declarations.  */
 #line 1 "calc.y"
 
-
+#include <stdio.h>
+int yylex();
+int yyerror();
 
 
 /* Enabling traces.  */
@@ -114,7 +118,7 @@ typedef int YYSTYPE;
 
 
 /* Line 216 of yacc.c.  */
-#line 118 "y.tab.c"
+#line 122 "y.tab.c"
 
 #ifdef short
 # undef short
@@ -332,17 +336,17 @@ union yyalloc
 #define YYLAST   3
 
 /* YYNTOKENS -- Number of terminals.  */
-#define YYNTOKENS  5
+#define YYNTOKENS  6
 /* YYNNTS -- Number of nonterminals.  */
 #define YYNNTS  2
 /* YYNRULES -- Number of rules.  */
-#define YYNRULES  2
+#define YYNRULES  3
 /* YYNRULES -- Number of states.  */
 #define YYNSTATES  6
 
 /* YYTRANSLATE(YYLEX) -- Bison symbol number corresponding to YYLEX.  */
 #define YYUNDEFTOK  2
-#define YYMAXUTOK   259
+#define YYMAXUTOK   260
 
 #define YYTRANSLATE(YYX)						\
   ((unsigned int) (YYX) <= YYMAXUTOK ? yytranslate[YYX] : YYUNDEFTOK)
@@ -375,7 +379,8 @@ static const yytype_uint8 yytranslate[] =
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
-       2,     2,     2,     2,     2,     2,     1,     2,     3,     4
+       2,     2,     2,     2,     2,     2,     1,     2,     3,     4,
+       5
 };
 
 #if YYDEBUG
@@ -383,19 +388,19 @@ static const yytype_uint8 yytranslate[] =
    YYRHS.  */
 static const yytype_uint8 yyprhs[] =
 {
-       0,     0,     3
+       0,     0,     3,     4
 };
 
 /* YYRHS -- A `-1'-separated list of the rules' RHS.  */
 static const yytype_int8 yyrhs[] =
 {
-       6,     0,    -1,     3,     4,     3,    -1
+       7,     0,    -1,    -1,     3,     4,     3,    -1
 };
 
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,     9,     9
+       0,    12,    12,    13
 };
 #endif
 
@@ -404,7 +409,7 @@ static const yytype_uint8 yyrline[] =
    First, the terminals, then, starting at YYNTOKENS, nonterminals.  */
 static const char *const yytname[] =
 {
-  "$end", "error", "$undefined", "NUMBER", "OPERATOR", "$accept",
+  "$end", "error", "$undefined", "NUMBER", "OPERATOR", "EOL", "$accept",
   "expression", 0
 };
 #endif
@@ -414,20 +419,20 @@ static const char *const yytname[] =
    token YYLEX-NUM.  */
 static const yytype_uint16 yytoknum[] =
 {
-       0,   256,   257,   258,   259
+       0,   256,   257,   258,   259,   260
 };
 # endif
 
 /* YYR1[YYN] -- Symbol number of symbol that rule YYN derives.  */
 static const yytype_uint8 yyr1[] =
 {
-       0,     5,     6
+       0,     6,     7,     7
 };
 
 /* YYR2[YYN] -- Number of symbols composing right hand side of rule YYN.  */
 static const yytype_uint8 yyr2[] =
 {
-       0,     2,     3
+       0,     2,     0,     3
 };
 
 /* YYDEFACT[STATE-NAME] -- Default rule to reduce with in state
@@ -435,7 +440,7 @@ static const yytype_uint8 yyr2[] =
    means the default is an error.  */
 static const yytype_uint8 yydefact[] =
 {
-       0,     0,     0,     0,     1,     2
+       2,     0,     0,     0,     1,     3
 };
 
 /* YYDEFGOTO[NTERM-NUM].  */
@@ -477,7 +482,7 @@ static const yytype_uint8 yycheck[] =
    symbol of state STATE-NUM.  */
 static const yytype_uint8 yystos[] =
 {
-       0,     3,     6,     4,     0,     3
+       0,     3,     7,     4,     0,     3
 };
 
 #define yyerrok		(yyerrstatus = 0)
@@ -1291,16 +1296,17 @@ yyreduce:
   YY_REDUCE_PRINT (yyn);
   switch (yyn)
     {
-        case 2:
-#line 10 "calc.y"
+        case 3:
+#line 14 "calc.y"
     {
 		  	printf("expression found\n");
+				return 1;
 		  }
     break;
 
 
 /* Line 1267 of yacc.c.  */
-#line 1304 "y.tab.c"
+#line 1310 "y.tab.c"
       default: break;
     }
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);
@@ -1514,13 +1520,13 @@ yyreturn:
 }
 
 
-#line 13 "calc.y"
+#line 19 "calc.y"
 
 
 
 int main()
 {
-	yyparse();
+	while(yyparse());
 	return 0;
 }
 

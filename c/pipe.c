@@ -6,44 +6,106 @@
 #include <stdlib.h>
 
 // ps -ef|grep bash|nl
+//
 
-void handler(int sig)
+#define MAX_ARGS 10
+
+struct cmd_t
 {
-	printf("sig:%d\n",sig);
-}
+	char* path;
+	char* args[MAX_ARGS];
+	int redirect_stdout;
+	int redirect_stdin;
+};
+
+struct cmd_t cmds[]=
+{
+	//{"/bin/ls","ls","-l","/",NULL},
+	{"/bin/ps","ps",NULL},
+	{"/usr/bin/nl","nl",NULL}
+};
 
 int main()
 {
-	int fd[2];
-	if(pipe(fd)<0)
+	int len=sizeof(cmds)/sizeof(struct cmd_t);	
+	int i;
+
+	int fds[len][2];
+	//int *fds=malloc(sizeof(int)*(fdlen));
+	// create pipes
+	fds[0][0]=STDIN_FILENO;
+	fds[len-1][1]=STDOUT_FILENO;
+	
+	for(i=1;i<len;++i)
 	{
-		perror("pipe");
-		return 1;
+		int fd[2];
+		pipe(fd);
+		fds[i-1][1]=fd[1];
+		fds[i][0]=fd[0];
 	}
-	pid_t pid=fork();
-	if(pid<0)
+
+	for(i=0;i<len;++i)
 	{
-		perror("fork");
-		return 1;
+		struct cmd_t cmd=cmds[i];
+		
+		pid_t pid=fork();
+		if(pid<0)
+		{
+			perror("fork");
+		}
+		else if(pid==0) // child
+		{
+			// dup read fd
+				if(fds[i][0]!=STDIN_FILENO)
+				{
+					dup2(fds[i][0],STDIN_FILENO);
+				}
+			// dup write rd
+				if(fds[i][1]!=STDOUT_FILENO)
+				{
+					dup2(fds[i][1],STDOUT_FILENO);
+				}
+			// close unused fds
+			int j;
+			for(j=0;j<len;++j)
+			{
+				if(fds[j][0]!=STDIN_FILENO)
+				{
+					close(fds[j][0]);	
+				}
+				if(fds[j][1]!=STDOUT_FILENO)
+				{
+					close(fds[j][1]);
+				}
+			}
+			printf("exec:%s\n",cmd.path);
+			fflush(stdout);
+			execv(cmd.path,cmd.args);
+			perror("execv");
+		}
+		else // parent
+		{
+		}
 	}
-	else if(pid==0)
+
+	// close all
+	int j;
+	for(j=0;j<len;++j)
 	{
-		// child
-		if(-1==close(fd[0]))
-			perror("close");
-		if(-1==close(fd[1]))
-			perror("close");
+		if(fds[j][0]!=STDIN_FILENO)
+		{
+			close(fds[j][0]);	
+		}
+		if(fds[j][1]!=STDOUT_FILENO)
+		{
+			close(fds[j][1]);
+		}
 	}
-	else if(pid>0)
+
+	// parent
+	for(i=0;i<len;++i)
 	{
-		//signal(SIGPIPE,handler);
-		char buf[]="hello";
-		if(-1==close(fd[0]))
-			perror("close");
-		int ret=write(fd[1],buf,sizeof(buf)-1);
-		printf("ret=%d\n",ret);
-		printf("press any key...");
-		getchar();
+		int stat;
+		wait(&stat);
 	}
-	return 0;
 }

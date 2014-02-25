@@ -1,20 +1,25 @@
 %{
-
+#include <stdio.h>
+int yylex();
+int yyerror();
 %}
 
 %token NUMBER
 %token OPERATOR
+%token EOL
 
 %%
-expression:	NUMBER OPERATOR NUMBER
+expression:	
+					|NUMBER OPERATOR NUMBER
 		  {
-		  	printf("expression found\n");
+				return 1;
 		  }
+			;
 %%
 
 
 int main()
 {
-	yyparse();
+	while(yyparse());
 	return 0;
 }

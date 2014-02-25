@@ -40,12 +40,14 @@
       know about them.  */
    enum yytokentype {
      NUMBER = 258,
-     OPERATOR = 259
+     OPERATOR = 259,
+     EOL = 260
    };
 #endif
 /* Tokens.  */
 #define NUMBER 258
 #define OPERATOR 259
+#define EOL 260
 
 
 

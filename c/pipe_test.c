@@ -1,41 +1,90 @@
 #include "inc.h"
+#include <fcntl.h>
 
 #define BUFF_SIZE 10
 
 int main(int argc,char** argv)
 {
-	int fd=open("./test.txt",O_RDONLY|O_CREAT);
-	int fd2=open("./test.txt",O_RDONLY);
-	int fd3=open("./test.txt",O_RDONLY);
-	printf("fd:%d,fd2:%d,fd3:%d\n",fd,fd2,fd3);
-	if(fd==-1)
-		perror("open file error");
+	const char path1[]="/bin/ls";
+	char* args1[]={"ps","-ef",NULL};
+	const char path2[]="/usr/bin/grep";
+	char* args2[]={"grep","bash",NULL};
+	const char path3[]="/usr/bin/nl";
+	char* args3[]={"nl",NULL};
 
-	if(fd2==-1)
-		perror("open file2 error");
-
-	if(fd3==-1)
-		perror("open file3 error");
-
-	pid_t p=fork();
-	if(p==-1)
+	int fd[2];
+	if(-1==pipe(fd))
 	{
-		perror("fork error");
+		perror("pipe");
+		return 1;
 	}
-	else if(p==0)
-		// in child
+	printf("fd0:%d,fd1:%d\n",fd[0],fd[1]);
+	pid_t pid=fork();
+	if(pid<0)
 	{
-		char *buf="child\n";
-		int i;
-		for(i=0;i<1000;i++)
-			write(fd,buf,strlen(buf));
+		perror("fork");
+	}
+	else if(pid==0)
+	{
+		// child
+		if(-1==dup2(fd[1],STDOUT_FILENO))
+		{
+			perror("dup2");
+		}
+		close(fd[0]);
+		if(-1==execv(path1,args1))
+		{
+			perror("execv1");
+		}
 	}
 	else
 	{
-		// in parent
-		char *buf="parent\n";
-		int i;
-		for(i=0;i<1000;i++)
-			write(fd,buf,strlen(buf));
+		// parent
+		// fork again
+		int fd2[2];
+		if(-1==pipe(fd2))
+		{
+			perror("pipe");
+		}
+		printf("fd2[0]:%d,fd2[1]:%d\n",fd2[0],fd2[1]);
+		pid_t pid2=fork();
+		if(pid2<0)
+		{
+			perror("fork 2");
+		}
+		else if(pid2==0)
+		{
+			// child
+			if(-1==dup2(fd[0],STDIN_FILENO))
+			{
+				perror("dup2");
+			}
+			close(fd[1]);
+
+			if(-1==dup2(fd2[1],STDOUT_FILENO))
+			{
+				perror("dup2");
+			}
+			close(fd2[0]);
+			//close(STDOUT_FILENO);
+
+			if(-1==execv(path2,args2))
+			{
+				perror("execv2");
+			}
+		}
+		else
+		{
+			if(-1==dup2(fd2[0],STDIN_FILENO))
+			{
+				perror("dup2");
+			}
+			close(fd2[1]);
+			if(-1==execv(path3,args3))
+			{
+				perror("execv3");
+			}
+		}
 	}
+
 }

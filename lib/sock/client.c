@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <netdb.h>
+#include <unistd.h>
 
 int main(int argc,char** argv)
 {
@@ -28,7 +29,12 @@ int main(int argc,char** argv)
 		perror("start client error");
 		return -1;
 	}
-	printf("peer addr:%s:%hd\n",get_peer_addr(sock),get_peer_port(sock));
-	printf("sockaddr:%s:%hu\n",get_sock_addr(sock),get_sock_port(sock));
+	char buf[1024];
+	int i;
+	for(i=0;i<100000;++i)
+	{
+		write(sock,buf,1024);
+		printf("writing 1024 bytes,i:%d\n",i);
+	}
 	return 0;
 }

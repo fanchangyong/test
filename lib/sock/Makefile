@@ -1,7 +1,7 @@
 testobjs=sock_util.o test.o
 clientobjs=sock_util.o client.o
 
-all:test client
+all:test client 
 
 test:$(testobjs)
 	cc -o $@ $^

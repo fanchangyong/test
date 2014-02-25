@@ -1,34 +1,37 @@
-Microsoft (R) Macro Assembler Version 5.00                  11/6/13 23:22:16
+Microsoft (R) Macro Assembler Version 5.00                  2/20/14 15:42:03
                                                              Page     1-1
 
 
-       1				assume cs:codesg 
+       1				assume cs:codesg,ss:stacksg,ds:datasg 
        2				 
-       3 0000				codesg segment 
-       4				 
-       5 0000  8C C8				mov ax,cs 
-       6 0002  8E D8				mov ds,ax 
+       3 0000				stacksg segment 
+       4 0000  0000 0000 0000 0000		dw 0,0,0,0,0,0,0,0 
+       5       0000 0000 0000 0000	
+       6 0010				stacksg ends 
        7				 
-       8 0004  B8 0020				mov ax,0020h 
-       9 0007  8E C0				mov es,ax 
-      10 0009  BB 0000				mov bx,0 
-      11 000C  B9 0017 R			mov cx, offset e 
-      12				 
-      13 000F					s: 
-      14 000F  8A 07					mov al,[bx] 
-      15 0011  26: 88 07				mov es:[bx],al 
-      16 0014  43					inc bx 
-      17 0015  E2 F8					loop s 
-      18				 
-      19 0017					e: 
-      20 0017  B8 4C00					mov ax,4c00h 
-      21 001A  CD 21					int 21h 
+       8 0000				datasg segment 
+       9 0000  31 2E 20 64 69 73 70		db '1. display      ' 
+      10       6C 61 79 20 20 20 20	
+      11       20 20			
+      12 0010  32 2E 20 62 72 6F 77		db '2. brows        ' 
+      13       73 20 20 20 20 20 20	
+      14       20 20			
+      15 0020  33 2E 20 72 65 70 6C		db '3. replace      ' 
+      16       61 63 65 20 20 20 20	
+      17       20 20			
+      18 0030  34 2E 20 6D 6F 64 69		db '4. modify       ' 
+      19       66 79 20 20 20 20 20	
+      20       20 20			
+      21 0040				datasg ends 
       22				 
-      23				 
-      24 001C				codesg ends 
-      25				 
-      26				end 
-Microsoft (R) Macro Assembler Version 5.00                  11/6/13 23:22:16
+      23 0000				codesg segment 
+      24 0000					start: 
+      25 0000  B8 0000					mov ax,[ax] 
+src\test.asm(16): error A2048: Must be index or base register
+      26 0003				codesg ends 
+      27				 
+      28				end start 
+Microsoft (R) Macro Assembler Version 5.00                  2/20/14 15:42:03
                                                              Symbols-1
 
 
@@ -36,24 +39,24 @@ Segments and Groups:
 
                 N a m e         	Length	 Align	Combine Class
 
-CODESG . . . . . . . . . . . . .  	001C	PARA	NONE	
+CODESG . . . . . . . . . . . . .  	0003	PARA	NONE	
+DATASG . . . . . . . . . . . . .  	0040	PARA	NONE	
+STACKSG  . . . . . . . . . . . .  	0010	PARA	NONE	
 
 Symbols:            
 
                 N a m e         	Type	 Value	 Attr
 
-E  . . . . . . . . . . . . . . .  	L NEAR	0017	CODESG
-
-S  . . . . . . . . . . . . . . .  	L NEAR	000F	CODESG
+START  . . . . . . . . . . . . .  	L NEAR	0000	CODESG
 
 @FILENAME  . . . . . . . . . . .  	TEXT  test		
 
 
-     26 Source  Lines
-     26 Total   Lines
-      5 Symbols
+     19 Source  Lines
+     19 Total   Lines
+      6 Symbols
 
-  50566 + 465978 Bytes symbol space free
+  50562 + 465982 Bytes symbol space free
 
       0 Warning Errors
-      0 Severe  Errors
+      1 Severe  Errors

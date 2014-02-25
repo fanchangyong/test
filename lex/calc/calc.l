@@ -6,12 +6,14 @@
 
 number [0-9]+
 op [\+\-\*\/]
+eof \n
 
 
 %%
 
 {number}	{return NUMBER;}
 {op}		{return OPERATOR;}
+{eof}		{return EOF;}
 
 %%
 

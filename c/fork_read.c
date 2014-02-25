@@ -16,22 +16,15 @@ int main()
 	}
 	else if(pid==0)
 	{
-		int fd=open("/dev/stdin",O_RDONLY);
-		if(fd==-1)
-		{
-			perror("open");
-			return 1;
-		}
-		printf("fd:%d\n",fd);
-		char buf[1024];
-		int ret=read(fd,buf,1024);
-		printf("buf:%s\n",buf);
-		if(ret==-1)
-			printf("read:%d,errno:%d,err:%s\n",ret,errno,strerror(errno));
+		printf("read in child\n");
+		int ret=getchar();
+		printf("ret in child:%d\n",ret);
 	}
 	else
 	{
-		//getchar();
-		sleep(3);
+		sleep(2);
+		printf("read in parent\n");
+		int ret=getchar();
+		printf("ret in parent:%d\n",ret);
 	}
 }
