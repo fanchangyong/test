@@ -43,21 +43,22 @@ def exch(arr,i,j)
 	arr[j]=tmp
 end
 
-def qsort(arr,lo,hi)
+def sort(arr,lo,hi)
 	if
 		lo>=hi
-		return arr
+		return 
 	end
 	index=partition(arr,lo,hi)
-	qsort(arr,lo,index)
-	qsort(arr,index+1,hi)
+	sort(arr,lo,index)
+	sort(arr,index+1,hi)
 end
 
 def test
-	arr=10.times.map{Random.rand(1000)}
+	#arr=10.times.map{Random.rand(1000)}
+	arr=[2,1]
 	puts "Before sort:"
 	puts arr.to_s
-	qsort(arr,0,arr.size-1)
+	sort(arr,0,arr.size-1)
 	puts "After sort:"
 	puts arr.to_s
 end

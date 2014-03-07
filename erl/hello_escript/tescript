@@ -2,4 +2,4 @@
 %% vim: set ft=erlang:
 
 main(Args)->
-	io:format("Args:~p~n",[Args]);
+	io:format("Args:~p~n",[Args]).

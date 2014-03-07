@@ -1,37 +1,80 @@
-Microsoft (R) Macro Assembler Version 5.00                  2/20/14 15:42:03
+Microsoft (R) Macro Assembler Version 5.00                  3/2/14 22:33:06
                                                              Page     1-1
 
 
-       1				assume cs:codesg,ss:stacksg,ds:datasg 
+       1				assume cs:codesg,ds:datasg 
        2				 
-       3 0000				stacksg segment 
-       4 0000  0000 0000 0000 0000		dw 0,0,0,0,0,0,0,0 
-       5       0000 0000 0000 0000	
-       6 0010				stacksg ends 
-       7				 
-       8 0000				datasg segment 
-       9 0000  31 2E 20 64 69 73 70		db '1. display      ' 
-      10       6C 61 79 20 20 20 20	
-      11       20 20			
-      12 0010  32 2E 20 62 72 6F 77		db '2. brows        ' 
-      13       73 20 20 20 20 20 20	
-      14       20 20			
-      15 0020  33 2E 20 72 65 70 6C		db '3. replace      ' 
-      16       61 63 65 20 20 20 20	
-      17       20 20			
-      18 0030  34 2E 20 6D 6F 64 69		db '4. modify       ' 
-      19       66 79 20 20 20 20 20	
-      20       20 20			
-      21 0040				datasg ends 
-      22				 
-      23 0000				codesg segment 
-      24 0000					start: 
-      25 0000  B8 0000					mov ax,[ax] 
-src\test.asm(16): error A2048: Must be index or base register
-      26 0003				codesg ends 
-      27				 
-      28				end start 
-Microsoft (R) Macro Assembler Version 5.00                  2/20/14 15:42:03
+       3 0000				datasg segment 
+       4 0000  57 65 6C 63 6F 6D 65		db 'Welcome to masm!',0 
+       5       20 74 6F 20 6D 61 73	
+       6       6D 21 00			
+       7 0011				datasg ends 
+       8				 
+       9 0000				stacksg segment 
+      10 0000  0020[				db 32 dup(0) 
+      11	   00			
+      12			 ]	
+      13				
+      14 0020				stacksg ends 
+      15				 
+      16 0000				codesg segment 
+      17 0000					start: 
+      18						 
+      19 0000  B8 ---- R				mov ax,datasg 
+      20 0003  8E D8					mov ds,ax 
+      21 0005  B8 ---- R				mov ax,stacksg 
+      22 0008  8E D0					mov ss,ax 
+      23 000A  BC 0020					mov sp,32 
+      24				 
+      25 000D  B6 08					mov dh,8 
+      26 000F  B2 03					mov dl,3 
+      27 0011  B1 02					mov cl,2 
+      28 0013  BE 0000					mov si,0 
+      29 0016  E8 001E R				call show_str 
+      30						 
+      31 0019  B8 4C00					mov ax,4c00h 
+      32 001C  CD 21					int 21h 
+      33				 
+      34				 
+      35 001E					show_str: 
+      36				 
+      37 001E  BF 0000					mov di,0 
+      38 0021  B0 A0					mov al,160 
+      39 0023  F6 E6					mul dh 
+      40 0025  03 F8					add di,ax 
+      41 0027  B0 02					mov al,2 
+      42 0029  F6 E2					mul dl 
+      43 002B  03 F8					add di,ax 
+      44				 
+      45 002D  B8 B800					mov ax,0b800h 
+      46 0030  8E C0					mov es,ax 
+      47				 
+      48 0032  8A D9					mov bl,cl 
+      49 0034					s: 
+      50 0034  B5 00					mov ch,0 
+      51 0036  8A 0C					mov cl,[si] 
+      52 0038  26: 88 0D				mov es:[di],cl 
+      53 003B  26: 88 5D 01				mov es:[di+1],bl 
+      54						 
+Microsoft (R) Macro Assembler Version 5.00                  3/2/14 22:33:06
+                                                             Page     1-2
+
+
+      55 003F  E3 06					jcxz ok 
+      56				 
+      57 0041  83 C7 02					add di,2 
+      58 0044  46					inc si 
+      59				 
+      60 0045  E2 ED					loop s 
+      61				 
+      62 0047					ok: 
+      63 0047  C3					ret 
+      64				 
+      65 0048				codesg ends 
+      66				 
+      67				 
+      68				end start 
+Microsoft (R) Macro Assembler Version 5.00                  3/2/14 22:33:06
                                                              Symbols-1
 
 
@@ -39,24 +82,28 @@ Segments and Groups:
 
                 N a m e         	Length	 Align	Combine Class
 
-CODESG . . . . . . . . . . . . .  	0003	PARA	NONE	
-DATASG . . . . . . . . . . . . .  	0040	PARA	NONE	
-STACKSG  . . . . . . . . . . . .  	0010	PARA	NONE	
+CODESG . . . . . . . . . . . . .  	0048	PARA	NONE	
+DATASG . . . . . . . . . . . . .  	0011	PARA	NONE	
+STACKSG  . . . . . . . . . . . .  	0020	PARA	NONE	
 
 Symbols:            
 
                 N a m e         	Type	 Value	 Attr
 
+OK . . . . . . . . . . . . . . .  	L NEAR	0047	CODESG
+
+S  . . . . . . . . . . . . . . .  	L NEAR	0034	CODESG
+SHOW_STR . . . . . . . . . . . .  	L NEAR	001E	CODESG
 START  . . . . . . . . . . . . .  	L NEAR	0000	CODESG
 
 @FILENAME  . . . . . . . . . . .  	TEXT  test		
 
 
-     19 Source  Lines
-     19 Total   Lines
-      6 Symbols
+     63 Source  Lines
+     63 Total   Lines
+      9 Symbols
 
-  50562 + 465982 Bytes symbol space free
+  50446 + 466098 Bytes symbol space free
 
       0 Warning Errors
-      1 Severe  Errors
+      0 Severe  Errors
