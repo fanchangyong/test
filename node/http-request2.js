@@ -154,7 +154,7 @@ function send(obj,cb){
 	req.end();
 	setTimeout(function(){
 		send(obj,cb);
-	},10);
+	},0);
 }
 
 function mySend(obj){

@@ -1,6 +1,11 @@
-var fork=require('child_process').fork;
-var cpus=require('os').cpus();
-for(var i=0;i<cpus.length;i++){
-	var f = fork('./worker.js');
-	console.log("fork result:",f);
+
+var child_process = require('child_process');
+var child = child_process.fork('worker.js');
+
+function regChild(child){
+	child.on('disconnect',function(){
+		regChild(child_process.fork('worker.js'));
+	});
 }
+
+regChild(child);

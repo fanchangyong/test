@@ -27,7 +27,7 @@ silence.save(function(err,kit){
 	kit.speak();
 });
 
-Kitten.find(function(err,kittens){
+Kitten.findOne(function(err,kittens){
 	if(err) return console.log(err);
 	console.log("kittens is:",kittens);
-});
+}).select('name name name name').exec();

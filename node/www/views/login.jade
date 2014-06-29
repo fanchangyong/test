@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	form(action="/login" method="get")
+		|User Name:
+		input(type="input" name="username") 
+		br
+		|Password:
+		input(type="password" name="password") 
+		br
+		input(type="submit",value="Login")
+	a(href="/") Home
+

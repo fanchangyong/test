@@ -1,12 +1,8 @@
-var x = 0;
-function test(){
-	console.log("this x is:",this.x);
-}
+var connect = require('connect');
 
-var o = {};
-o.x = 1;
-o.m = test;
-
-o.m.apply(o);
-
-console.log("this in global:",this);
+connect.createServer(
+		connect.logger('tiny')
+		,function(req,res){
+			res.writeHead(200);
+			res.end('Hello world');
+		}).listen(3100);
