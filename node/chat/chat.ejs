@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="bower_components/socket.io-client/socket.io.js"></script>
+		<title><%= username %>::Socket.IO chat</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font: 13px Helvetica, Arial; }
+      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages li { padding: 5px 10px; }
+      #messages li:nth-child(odd) { background: #eee; }
+    </style>
+  </head>
+  <body>
+    <ul id="messages"></ul>
+    <form action="#">
+      <input id="m" autocomplete="off" /><button>Send</button>
+    </form>
+		<script>
+			var socket = io();
+			
+			// tell server my name
+			socket.emit('tellname','<%= username %>');
+
+			var color;
+			$('form').submit(function(){
+				socket.emit('chat message',{username:'<%= username %>',msg:$('#m').val()});
+				$('#m').val('');
+				return false;
+			});
+			socket.on('user disconnect',function(){
+				$('#messages').append($('<li style="background-color:red">').text('someone exit'));
+			});
+
+			socket.on('err',function(msg){
+					alert('error:'+msg);
+			});
+
+			socket.on('color',function(cl){
+				color = cl;
+			});
+			socket.on('chat message',function(obj){
+					var username = obj.username;
+					var msg = obj.msg;
+					var color = obj.color
+					if(username == '<%= username %>'){
+						$('#messages').append($('<li>').text(username+' says:'+msg).css({color:color,'text-align':"right"}));
+					}else{
+						$('#messages').append($('<li>').text(username+' says:'+msg).css({color:color}));
+					}
+			});
+		</script>
+  </body>
+</html>
