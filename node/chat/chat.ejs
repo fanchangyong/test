@@ -7,24 +7,32 @@
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body { font: 13px Helvetica, Arial; }
-      form { background: #000; padding: 2px; position: fixed; width: 600; 
-				position:absolute; bottom:0;}
+      form { background: #000; padding: 2px;  bottom:0; width: 600; }
       form input { border: 0; padding: 10px; width: 480px; margin-right: 120;  top:400px; }
       form button { width: 110px; background: rgb(130, 224, 255); border: none; padding: 10px; }
 			.main{width:600px; height:600px; margin:0 auto;border:solid 3px #00cc00;overflow-y:scroll;
-				max-height:400px;position:relative;}
+				overflow:auto;max-height:400px;position:relative;}
       #messages { list-style-type: none; margin: 0; padding: 0; }
       #messages li { padding: 5px 10px; }
       #messages li:nth-child(odd) { background: #eee; }
     </style>
   </head>
   <body>
-		<div class="main">
+		<div class="main" id="maindiv">
     <ul id="messages"></ul>
+	</div>
+	<div class="" style="margin:0 auto;width:600px;">
     <form action="#">
       <input id="m" autocomplete="off" /><button>Send</button>
     </form>
+	</div>
 		<script>
+		
+			setInterval(function(){
+			var e = document.getElementById('maindiv');
+			e.scrollTop = e.scrollHeight;
+			},200);
+
 			var socket = io();
 			
 			// tell server my name
@@ -60,6 +68,5 @@
 					}
 			});
 		</script>
-	</div>
   </body>
 </html>
