@@ -1,18 +1,39 @@
 #!/usr/bin/ruby
 
-$global_variable = 10
-class Class1
-  def print_global
-     puts "Global variable in Class1 is #$global_variable"
-  end
-end
-class Class2
-  def print_global
-     puts "Global variable in Class2 is #$global_variable"
-  end
+class Car
+	def initialize(attrs)
+		@name = attrs[:name]
+		@brand = attrs[:brand]
+	end
+
+	private
+	def desc
+		puts "Hi,My name is:#{name},my brand is:#{brand}"
+	end
+
+	public
+	def pub
+		puts "putlic method"
+	end
+
+	def self.brand_list
+		%w{Audi BMW DasAuto Ford Toyota}
+	end
+
+	attr_accessor :name,:brand
 end
 
-class1obj = Class1.new
-class1obj.print_global
-class2obj = Class2.new
-class2obj.print_global
+class FordCars < Car
+	def my
+		pub
+	end
+end
+
+focus=FordCars.new({
+	:name => "Focus",
+	:brand => 'ford'
+})
+
+puts "Brand list are :#{FordCars.brand_list}"
+focus.pub
+

@@ -4,6 +4,7 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var formidable = require('formidable');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -28,12 +29,29 @@ app.use('/', routes);
 app.use('/test',testroute);
 app.use('/login',login);
 
+app.get('/upload',function(req,res,next){
+	console.log('get /upload');
+	res.render('upload',{title:'Upload'});
+});
+
+app.post('/upload',function(req,res,next){
+	// parse a file upload
+	var form = new formidable.IncomingForm();
+
+	form.parse(req, function(err, fields, files) {
+		console.log('fields:',fields);
+		console.log('files:',files);
+	});
+	res.end('post upload');
+});
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
     next(err);
 });
+
+
 
 /// error handlers
 

@@ -23,8 +23,12 @@ int main()
 		return 1;
 	}
 
-	fork();
 
+	int i;
+	for(i=0;i<3;i++)
+	{
+		fork();
+	}
 	if(listen(fd,5)!=0)
 	{
 		perror("listen");
@@ -35,12 +39,16 @@ int main()
 
 	for(;;)
 	{
-		if(accept(fd,NULL,NULL)==-1)
+		int cli_fd = 0;
+		if((cli_fd=accept(fd,NULL,NULL))==-1)
 		{
 			perror("accept");
 			return 1;
 		}
+		
 		printf("accept ok,pid:%d\n",getpid());
+
+		close(cli_fd);
 	}
 
 

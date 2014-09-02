@@ -31,12 +31,15 @@ app.get('/login',function(req,res){
 });
 
 app.post('/login',function(req,res){
+	console.log('post login,body:',req.body);
 	auth.authUser(req.body.username,req.body.password,function(err,user){
 		if(err){
-			res.send(err);
+			var obj={result:'fail',value:err};
+			res.end(JSON.stringify(obj));
 		}else{
 			req.session.user = user;
-			res.redirect('/');
+			var obj={result:'ok'};
+			res.end(JSON.stringify(obj));
 		}
 	});
 });
@@ -53,6 +56,12 @@ app.post('/regist',function(req,res){
 		req.session.user = user;
 		res.redirect('/');
 	});
+});
+
+app.post('/logout',function(req,res){
+	req.session.destroy();
+	var str=JSON.stringify({result:'ok'});
+	res.end(str);
 });
 
 app.use(express.static(__dirname));

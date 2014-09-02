@@ -1,0 +1,31 @@
+/*Add your CSS below!*/
+
+
+.friend:{
+    border: 2px dashed #008000;
+		background-color: red;
+}
+
+.family:{
+   border: 2px dashed #0000FF;
+}
+
+.enemy:{
+    border: 2px dashed #FF0000;
+}
+
+
+
+div {
+	background-color:red;
+	display: inline-block;
+	margin-left: 5px;
+	width:100px;
+	height:100px;
+	border-radius:100%;
+	border-width:2px;
+	border-color:black;
+	border-style:solid;
+}
+
+

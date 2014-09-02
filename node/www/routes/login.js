@@ -2,17 +2,12 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function(req, res) {
-	var username = req.query['username'];
-	var pwd = req.query['password'];
-	if(!username || !pwd){
-		res.render('login',{title:'Login As'});
-	}else{
-		res.render('logged');
-	}
+	res.render('login',{title:'Login As'});
 });
 
-router.get('/user',function(){
-	console.log('login usr');
-});
+router.post('/',function(req,res){
+	console.log('body:',req.body);
+	res.send('ok!');
+})
 
 module.exports = router;

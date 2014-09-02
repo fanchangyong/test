@@ -1,0 +1,9 @@
+{
+  "name": "testnoflo",
+  "version": "0.0.1",
+  "dependencies": {
+    "noflo-core": "^0.1.11",
+    "noflo-filesystem": "^1.0.6",
+    "noflo-math": "0.0.6"
+  }
+}

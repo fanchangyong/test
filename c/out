@@ -1,0 +1,311 @@
+CPU     ID                    FUNCTION:NAME
+  1  76294                     cerror:entry 
+  1  75956  _pthread_exit_if_canceled:entry 
+  1 239534  _pthread_exit_if_canceled:entry 
+  1  76293            cerror_nocancel:entry 
+  1  76292                    __error:entry 
+  1  62751                        foo:entry 
+  1  74353                     printf:entry 
+  1 239624        pthread_getspecific:entry 
+  1  74410                 vfprintf_l:entry 
+  1  74256                  flockfile:entry 
+  1 239627               pthread_self:entry 
+  1 239598         pthread_mutex_lock:entry 
+  1 239599        _pthread_mutex_lock:entry 
+  1 239602  _pthread_mutex_check_init:entry 
+  1 235779        pthread_threadid_np:entry 
+  1 234254 OSAtomicCompareAndSwapLong$VARIANT$mp:entry 
+  1  74767                 __xvprintf:entry 
+  1  74766                 __v2printf:entry 
+  1  74412                 __vfprintf:entry 
+  1  74119               localeconv_l:entry 
+  1  74321                 __sfvwrite:entry 
+  1 235722           _platform_memchr:entry 
+  1 235718 _platform_memmove$VARIANT$Ivybridge:entry 
+  1  74275                   __fflush:entry 
+  1  74274                   __sflush:entry 
+  1  74389                    _swrite:entry 
+  1  74385                   __swrite:entry 
+  1  76619           __write_nocancel:entry 
+  1  74259                funlockfile:entry 
+  1 239627               pthread_self:entry 
+  1 239601       pthread_mutex_unlock:entry 
+  1 239602  _pthread_mutex_check_init:entry 
+  1 239596             __mtx_droplock:entry 
+  1 234254 OSAtomicCompareAndSwapLong$VARIANT$mp:entry 
+  1  74353                     printf:entry 
+  1 239624        pthread_getspecific:entry 
+  1  74410                 vfprintf_l:entry 
+  1  74256                  flockfile:entry 
+  1 239627               pthread_self:entry 
+  1 239598         pthread_mutex_lock:entry 
+  1 239599        _pthread_mutex_lock:entry 
+  1 239602  _pthread_mutex_check_init:entry 
+  1 235779        pthread_threadid_np:entry 
+  1 234254 OSAtomicCompareAndSwapLong$VARIANT$mp:entry 
+  1  74767                 __xvprintf:entry 
+  1  74766                 __v2printf:entry 
+  1  74412                 __vfprintf:entry 
+  1  74119               localeconv_l:entry 
+  1  74414                    __ultoa:entry 
+  1  74321                 __sfvwrite:entry 
+  1 235722           _platform_memchr:entry 
+  1 235718 _platform_memmove$VARIANT$Ivybridge:entry 
+  1 235722           _platform_memchr:entry 
+  1 235718 _platform_memmove$VARIANT$Ivybridge:entry 
+  1  74321                 __sfvwrite:entry 
+  1 235722           _platform_memchr:entry 
+  1 235718 _platform_memmove$VARIANT$Ivybridge:entry 
+  1  74275                   __fflush:entry 
+  1  74274                   __sflush:entry 
+  1  74389                    _swrite:entry 
+  1  74385                   __swrite:entry 
+  1  76619           __write_nocancel:entry 
+  1  74259                funlockfile:entry 
+  1 239627               pthread_self:entry 
+  1 239601       pthread_mutex_unlock:entry 
+  1 239602  _pthread_mutex_check_init:entry 
+  1 239596             __mtx_droplock:entry 
+  1 234254 OSAtomicCompareAndSwapLong$VARIANT$mp:entry 
+  1  62752                        baz:entry 
+  1  71330           dyld_stub_binder:entry 
+  1  71331 misaligned_stack_error_entering_dyld_stub_binder:entry 
+  1  71332          dyld_stub_binder_:entry 
+  1  71397 _dyld_fast_stub_entry(void*, long):entry 
+  1  27270 dyld::fastBindLazySymbol(ImageLoader**, unsigned long):entry 
+  1  47322 ImageLoaderMachOCompressed::doBindFastLazySymbol(unsigned int, ImageLoader::LinkContext const&, void (*)(), void (*)()):entry 
+  1  27636 ImageLoaderMachO::usesTwoLevelNameSpace() const:entry 
+  1  27625 ImageLoaderMachO::segActualLoadAddress(unsigned int) const:entry 
+  1  47294 ImageLoaderMachOCompressed::segmentCommandOffsets() const:entry 
+  1  47314 ImageLoaderMachOCompressed::resolve(ImageLoader::LinkContext const&, char const*, unsigned char, int, ImageLoader const**, Imag:entry 
+  1  47295 ImageLoaderMachOCompressed::libImage(unsigned int) const:entry 
+  1  47313 ImageLoaderMachOCompressed::resolveTwolevel(ImageLoader::LinkContext const&, ImageLoader const*, bool, char const*, bool, Image:entry 
+  1  27652 ImageLoaderMachO::findExportedSymbol(char const*, bool, ImageLoader const**) const:entry 
+  1  47302 ImageLoaderMachOCompressed::findExportedSymbol(char const*, ImageLoader const**) const:entry 
+  1  47301 ImageLoaderMachOCompressed::trieWalk(unsigned char const*, unsigned char const*, char const*):entry 
+  1  47295 ImageLoaderMachOCompressed::libImage(unsigned int) const:entry 
+  1  27652 ImageLoaderMachO::findExportedSymbol(char const*, bool, ImageLoader const**) const:entry 
+  1  47302 ImageLoaderMachOCompressed::findExportedSymbol(char const*, ImageLoader const**) const:entry 
+  1  47301 ImageLoaderMachOCompressed::trieWalk(unsigned char const*, unsigned char const*, char const*):entry 
+  1  27653 ImageLoaderMachO::getExportedSymbolAddress(ImageLoader::Symbol const*, ImageLoader::LinkContext const&, ImageLoader const*, boo:entry 
+  1  27654 ImageLoaderMachO::getSymbolAddress(ImageLoader::Symbol const*, ImageLoader const*, ImageLoader::LinkContext const&, bool) const:entry 
+  1  47304 ImageLoaderMachOCompressed::exportedSymbolAddress(ImageLoader::LinkContext const&, ImageLoader::Symbol const*, ImageLoader cons:entry 
+  1  27670 ImageLoaderMachO::bindLocation(ImageLoader::LinkContext const&, unsigned long, unsigned long, ImageLoader const*, unsigned char:entry 
+  1  27636 ImageLoaderMachO::usesTwoLevelNameSpace() const:entry 
+  1  77440                     malloc:entry 
+  1  77427         malloc_zone_malloc:entry 
+  1  77225               szone_malloc:entry 
+  1  77408  szone_malloc_should_clear:entry 
+  1 234278             OSSpinLockLock:entry 
+  1  77409 small_malloc_from_free_list:entry 
+  1 234278             OSSpinLockLock:entry 
+  1 234281           OSSpinLockUnlock:entry 
+  1 234263            OSMemoryBarrier:entry 
+  1 234281           OSSpinLockUnlock:entry 
+  1  77410    allocate_pages_securely:entry 
+  1  76435                mach_vm_map:entry 
+  1  76217 _kernelrpc_mach_vm_map_trap:entry 
+  1 234278             OSSpinLockLock:entry 
+  1 234278             OSSpinLockLock:entry 
+  1 234281           OSSpinLockUnlock:entry 
+  1 234263            OSMemoryBarrier:entry 
+  1 234281           OSSpinLockUnlock:entry 
+  1  77440                     malloc:entry 
+  1  77427         malloc_zone_malloc:entry 
+  1  77225               szone_malloc:entry 
+  1  77408  szone_malloc_should_clear:entry 
+  1 234278             OSSpinLockLock:entry 
+  1  77409 small_malloc_from_free_list:entry 
+  1 234281           OSSpinLockUnlock:entry 
+  1  71330           dyld_stub_binder:entry 
+  1  71331 misaligned_stack_error_entering_dyld_stub_binder:entry 
+  1  71332          dyld_stub_binder_:entry 
+  1  71397 _dyld_fast_stub_entry(void*, long):entry 
+  1  27270 dyld::fastBindLazySymbol(ImageLoader**, unsigned long):entry 
+  1  47322 ImageLoaderMachOCompressed::doBindFastLazySymbol(unsigned int, ImageLoader::LinkContext const&, void (*)(), void (*)()):entry 
+  1  27636 ImageLoaderMachO::usesTwoLevelNameSpace() const:entry 
+  1  27625 ImageLoaderMachO::segActualLoadAddress(unsigned int) const:entry 
+  1  47294 ImageLoaderMachOCompressed::segmentCommandOffsets() const:entry 
+  1  47314 ImageLoaderMachOCompressed::resolve(ImageLoader::LinkContext const&, char const*, unsigned char, int, ImageLoader const**, Imag:entry 
+  1  47295 ImageLoaderMachOCompressed::libImage(unsigned int) const:entry 
+  1  47313 ImageLoaderMachOCompressed::resolveTwolevel(ImageLoader::LinkContext const&, ImageLoader const*, bool, char const*, bool, Image:entry 
+  1  27652 ImageLoaderMachO::findExportedSymbol(char const*, bool, ImageLoader const**) const:entry 
+  1  47302 ImageLoaderMachOCompressed::findExportedSymbol(char const*, ImageLoader const**) const:entry 
+  1  47301 ImageLoaderMachOCompressed::trieWalk(unsigned char const*, unsigned char const*, char const*):entry 
+  1  47295 ImageLoaderMachOCompressed::libImage(unsigned int) const:entry 
+  1  27652 ImageLoaderMachO::findExportedSymbol(char const*, bool, ImageLoader const**) const:entry 
+  1  47302 ImageLoaderMachOCompressed::findExportedSymbol(char const*, ImageLoader const**) const:entry 
+  1  47301 ImageLoaderMachOCompressed::trieWalk(unsigned char const*, unsigned char const*, char const*):entry 
+  1  27653 ImageLoaderMachO::getExportedSymbolAddress(ImageLoader::Symbol const*, ImageLoader::LinkContext const&, ImageLoader const*, boo:entry 
+  1  27654 ImageLoaderMachO::getSymbolAddress(ImageLoader::Symbol const*, ImageLoader const*, ImageLoader::LinkContext const&, bool) const:entry 
+  1  47304 ImageLoaderMachOCompressed::exportedSymbolAddress(ImageLoader::LinkContext const&, ImageLoader::Symbol const*, ImageLoader cons:entry 
+  1  27670 ImageLoaderMachO::bindLocation(ImageLoader::LinkContext const&, unsigned long, unsigned long, ImageLoader const*, unsigned char:entry 
+  1  27636 ImageLoaderMachO::usesTwoLevelNameSpace() const:entry 
+  1  77436                       free:entry 
+  1  77224                 szone_size:entry 
+  1  77234   szone_free_definite_size:entry 
+  1 234278             OSSpinLockLock:entry 
+  1 234281           OSSpinLockUnlock:entry 
+  1  74353                     printf:entry 
+  1 239624        pthread_getspecific:entry 
+  1  74410                 vfprintf_l:entry 
+  1  74256                  flockfile:entry 
+  1 239627               pthread_self:entry 
+  1 239598         pthread_mutex_lock:entry 
+  1 239599        _pthread_mutex_lock:entry 
+  1 239602  _pthread_mutex_check_init:entry 
+  1 235779        pthread_threadid_np:entry 
+  1 234254 OSAtomicCompareAndSwapLong$VARIANT$mp:entry 
+  1  74767                 __xvprintf:entry 
+  1  74766                 __v2printf:entry 
+  1  74412                 __vfprintf:entry 
+  1  74119               localeconv_l:entry 
+  1  74414                    __ultoa:entry 
+  1  74321                 __sfvwrite:entry 
+  1 235722           _platform_memchr:entry 
+  1 235718 _platform_memmove$VARIANT$Ivybridge:entry 
+  1 235722           _platform_memchr:entry 
+  1 235718 _platform_memmove$VARIANT$Ivybridge:entry 
+  1 235722           _platform_memchr:entry 
+  1 235718 _platform_memmove$VARIANT$Ivybridge:entry 
+  1  74321                 __sfvwrite:entry 
+  1 235722           _platform_memchr:entry 
+  1 235718 _platform_memmove$VARIANT$Ivybridge:entry 
+  1  74275                   __fflush:entry 
+  1  74274                   __sflush:entry 
+  1  74389                    _swrite:entry 
+  1  74385                   __swrite:entry 
+  1  76619           __write_nocancel:entry 
+  1  74259                funlockfile:entry 
+  1 239627               pthread_self:entry 
+  1 239601       pthread_mutex_unlock:entry 
+  1 239602  _pthread_mutex_check_init:entry 
+  1 239596             __mtx_droplock:entry 
+  1 234254 OSAtomicCompareAndSwapLong$VARIANT$mp:entry 
+  1  74611                       exit:entry 
+  1  71411                  _tlv_exit:entry 
+  1 239624        pthread_getspecific:entry 
+  1  74598             __cxa_finalize:entry 
+  1 239598         pthread_mutex_lock:entry 
+  1 239599        _pthread_mutex_lock:entry 
+  1 239602  _pthread_mutex_check_init:entry 
+  1 235779        pthread_threadid_np:entry 
+  1 234254 OSAtomicCompareAndSwapLong$VARIANT$mp:entry 
+  1 239601       pthread_mutex_unlock:entry 
+  1 239602  _pthread_mutex_check_init:entry 
+  1 239596             __mtx_droplock:entry 
+  1 234254 OSAtomicCompareAndSwapLong$VARIANT$mp:entry 
+  1  27238 dyld::runTerminators(void*):entry 
+  1  27279 dyld::notifyBatchPartial(dyld_image_states, bool, char const* (*)(dyld_image_states, unsigned int, dyld_image_info const*)):entry 
+  1  50710 OSAtomicCompareAndSwap64$VARIANT$mp:entry 
+  1  50710 OSAtomicCompareAndSwap64$VARIANT$mp:entry 
+  1 239598         pthread_mutex_lock:entry 
+  1 239599        _pthread_mutex_lock:entry 
+  1 239602  _pthread_mutex_check_init:entry 
+  1 235779        pthread_threadid_np:entry 
+  1 234254 OSAtomicCompareAndSwapLong$VARIANT$mp:entry 
+  1 239601       pthread_mutex_unlock:entry 
+  1 239602  _pthread_mutex_check_init:entry 
+  1 239596             __mtx_droplock:entry 
+  1 234254 OSAtomicCompareAndSwapLong$VARIANT$mp:entry 
+  1 532881 std::__1::ios_base::Init::~Init():entry 
+  1 532728 std::__1::basic_ostream<char, std::__1::char_traits<char> >::flush():entry 
+  1 532897 std::__1::__stdoutbuf<char>::sync():entry 
+  1 533028 std::__1::codecvt<char, char, __mbstate_t>::do_unshift(__mbstate_t&, char*, char*, char*&) const:entry 
+  1  74326                     fwrite:entry 
+  1  74272                     fflush:entry 
+  1  74256                  flockfile:entry 
+  1 239627               pthread_self:entry 
+  1 239598         pthread_mutex_lock:entry 
+  1 239599        _pthread_mutex_lock:entry 
+  1 239602  _pthread_mutex_check_init:entry 
+  1 235779        pthread_threadid_np:entry 
+  1 234254 OSAtomicCompareAndSwapLong$VARIANT$mp:entry 
+  1  74274                   __sflush:entry 
+  1  74259                funlockfile:entry 
+  1 239627               pthread_self:entry 
+  1 239601       pthread_mutex_unlock:entry 
+  1 239602  _pthread_mutex_check_init:entry 
+  1 239596             __mtx_droplock:entry 
+  1 234254 OSAtomicCompareAndSwapLong$VARIANT$mp:entry 
+  1 532728 std::__1::basic_ostream<char, std::__1::char_traits<char> >::flush():entry 
+  1 532897 std::__1::__stdoutbuf<char>::sync():entry 
+  1 533028 std::__1::codecvt<char, char, __mbstate_t>::do_unshift(__mbstate_t&, char*, char*, char*&) const:entry 
+  1  74326                     fwrite:entry 
+  1  74272                     fflush:entry 
+  1  74256                  flockfile:entry 
+  1 239627               pthread_self:entry 
+  1 239598         pthread_mutex_lock:entry 
+  1 239599        _pthread_mutex_lock:entry 
+  1 239602  _pthread_mutex_check_init:entry 
+  1 234278             OSSpinLockLock:entry 
+  1 239581        _pthread_mutex_init:entry 
+  1 234263            OSMemoryBarrier:entry 
+  1 234281           OSSpinLockUnlock:entry 
+  1 235779        pthread_threadid_np:entry 
+  1 234254 OSAtomicCompareAndSwapLong$VARIANT$mp:entry 
+  1  74274                   __sflush:entry 
+  1  74259                funlockfile:entry 
+  1 239627               pthread_self:entry 
+  1 239601       pthread_mutex_unlock:entry 
+  1 239602  _pthread_mutex_check_init:entry 
+  1 239596             __mtx_droplock:entry 
+  1 234254 OSAtomicCompareAndSwapLong$VARIANT$mp:entry 
+  1 532772 std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >::flush():entry 
+  1 532885 std::__1::__stdoutbuf<wchar_t>::sync():entry 
+  1 533036 std::__1::codecvt<wchar_t, char, __mbstate_t>::do_unshift(__mbstate_t&, char*, char*, char*&) const:entry 
+  1  74183                  wcrtomb_l:entry 
+  1  74161              _none_wcrtomb:entry 
+  1  74326                     fwrite:entry 
+  1  74272                     fflush:entry 
+  1  74256                  flockfile:entry 
+  1 239627               pthread_self:entry 
+  1 239598         pthread_mutex_lock:entry 
+  1 239599        _pthread_mutex_lock:entry 
+  1 239602  _pthread_mutex_check_init:entry 
+  1 235779        pthread_threadid_np:entry 
+  1 234254 OSAtomicCompareAndSwapLong$VARIANT$mp:entry 
+  1  74274                   __sflush:entry 
+  1  74259                funlockfile:entry 
+  1 239627               pthread_self:entry 
+  1 239601       pthread_mutex_unlock:entry 
+  1 239602  _pthread_mutex_check_init:entry 
+  1 239596             __mtx_droplock:entry 
+  1 234254 OSAtomicCompareAndSwapLong$VARIANT$mp:entry 
+  1 532772 std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >::flush():entry 
+  1 532885 std::__1::__stdoutbuf<wchar_t>::sync():entry 
+  1 533036 std::__1::codecvt<wchar_t, char, __mbstate_t>::do_unshift(__mbstate_t&, char*, char*, char*&) const:entry 
+  1  74183                  wcrtomb_l:entry 
+  1  74161              _none_wcrtomb:entry 
+  1  74326                     fwrite:entry 
+  1  74272                     fflush:entry 
+  1  74256                  flockfile:entry 
+  1 239627               pthread_self:entry 
+  1 239598         pthread_mutex_lock:entry 
+  1 239599        _pthread_mutex_lock:entry 
+  1 239602  _pthread_mutex_check_init:entry 
+  1 235779        pthread_threadid_np:entry 
+  1 234254 OSAtomicCompareAndSwapLong$VARIANT$mp:entry 
+  1  74274                   __sflush:entry 
+  1  74259                funlockfile:entry 
+  1 239627               pthread_self:entry 
+  1 239601       pthread_mutex_unlock:entry 
+  1 239602  _pthread_mutex_check_init:entry 
+  1 239596             __mtx_droplock:entry 
+  1 234254 OSAtomicCompareAndSwapLong$VARIANT$mp:entry 
+  1 239598         pthread_mutex_lock:entry 
+  1 239599        _pthread_mutex_lock:entry 
+  1 239602  _pthread_mutex_check_init:entry 
+  1 235779        pthread_threadid_np:entry 
+  1 234254 OSAtomicCompareAndSwapLong$VARIANT$mp:entry 
+  1 239601       pthread_mutex_unlock:entry 
+  1 239602  _pthread_mutex_check_init:entry 
+  1 239596             __mtx_droplock:entry 
+  1 234254 OSAtomicCompareAndSwapLong$VARIANT$mp:entry 
+  1  74295                   _cleanup:entry 
+  1  74322                     _fwalk:entry 
+  1  74274                   __sflush:entry 
+  1  74274                   __sflush:entry 
+  1  74274                   __sflush:entry 
+  1  76465                     __exit:entry 
+

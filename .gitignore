@@ -6,3 +6,5 @@ tags
 a.out
 vim/*
 *.o
+node_modules
+.DS_Store

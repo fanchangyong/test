@@ -1,8 +1,8 @@
-var connect = require('connect');
+function test() {
+	var foo = 1;
+	function foo(){
 
-connect.createServer(
-		connect.logger('tiny')
-		,function(req,res){
-			res.writeHead(200);
-			res.end('Hello world');
-		}).listen(3100);
+	}
+	console.log(foo);
+}
+test();
