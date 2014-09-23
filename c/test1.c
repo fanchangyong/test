@@ -1,117 +1,53 @@
-#include <sys/event.h>
-#include <sys/socket.h>
-#include <sys/time.h>
-#include <netdb.h>
+#include <fcntl.h>
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <sys/types.h>
+#include <sys/uio.h>
 #include <unistd.h>
+#include <stdlib.h>
+#include <sys/stat.h>
 
-#define BUFSIZE 1024
+extern int errno;
 
-/* function prototypes */
-void diep(const char *s);
-int tcpopen(const char *host, int port);
-void sendbuftosck(int sckfd, const char *buf, int len);
-
-int main(int argc, char *argv[])
+void err(char* str)
 {
-   struct kevent chlist[2];   /* events we want to monitor */
-   struct kevent evlist[2];   /* events that were triggered */
-   char buf[BUFSIZE];
-   int sckfd, kq, nev, i;
-
-   /* check argument count */
-   if (argc != 3) {
-      fprintf(stderr, "usage: %s host port\n", argv[0]);
-      exit(EXIT_FAILURE);
-   }
-
-   /* open a connection to a host:port pair */
-   sckfd = tcpopen(argv[1], atoi(argv[2]));
-
-   /* create a new kernel event queue */
-   if ((kq = kqueue()) == -1)
-      diep("kqueue()");
-
-   /* initialise kevent structures */
-   EV_SET(&chlist[0], sckfd, EVFILT_READ, EV_ADD | EV_ENABLE, 0, 0, 0);
-   EV_SET(&chlist[1], fileno(stdin), EVFILT_READ, EV_ADD | EV_ENABLE, 0, 0, 0);
-
-   /* loop forever */
-   for (;;) {
-      nev = kevent(kq, chlist, 2, evlist, 2, NULL);
-
-      if (nev < 0)
-         diep("kevent()");
-
-       else if (nev > 0) {
-         if (evlist[0].flags & EV_EOF)                       /* read direction of socket has shutdown */
-            exit(EXIT_FAILURE);
-
-         for (i = 0; i < nev; i++) {
-            if (evlist[i].flags & EV_ERROR) {                /* report errors */
-               fprintf(stderr, "EV_ERROR: %s\n", strerror(evlist[i].data));
-               exit(EXIT_FAILURE);
-            }
-
-            if (evlist[i].ident == sckfd) {                  /* we have data from the host */
-               memset(buf, 0, BUFSIZE);
-               if (read(sckfd, buf, BUFSIZE) < 0)
-                  diep("read()");
-               fputs(buf, stdout);
-            }
-
-            else if (evlist[i].ident == fileno(stdin)) {     /* we have data from stdin */
-               memset(buf, 0, BUFSIZE);
-               fgets(buf, BUFSIZE, stdin);
-               sendbuftosck(sckfd, buf, strlen(buf));
-            }
-         }
-      }
-   }
-
-   close(kq);
-   return EXIT_SUCCESS;
+	perror(str);
+	exit(-1);
 }
 
-void diep(const char *s)
+int main()
 {
-   perror(s);
-   exit(EXIT_FAILURE);
-}
+	char path[] = "./myfifo";
+	mkfifo(path,O_RDWR);
 
-int tcpopen(const char *host, int port)
-{
-   struct sockaddr_in server;
-   struct hostent *hp;
-   int sckfd;
+	pid_t pid;
+	if((pid=fork())<0)
+	{
+		err("fork");
+	}
+	else if(pid>0) // parent
+	{
+		int fd = open(path,O_RDWR);
+		if(fd==-1)
+		{
+			err("open");
+		}
 
-   if ((hp = gethostbyname(host)) == NULL)
-      diep("gethostbyname()");
+		char buf[1024];
+		int ret = read(fd,buf,sizeof(buf));
+		printf("read return:%d\n",ret);
+		printf("parent receive:%s\n",buf);
+	}
+	else // child
+	{
+		int fd = open(path,O_RDWR);
+		if(fd==-1)
+		{
+			err("open");
+		}
 
-   if ((sckfd = socket(PF_INET, SOCK_STREAM, 0)) < 0)
-      diep("socket()");
+		char buf[]="Writing from child";
+		int ret = write(fd,buf,sizeof(buf));
+		printf("write return:%d\n",ret);
+	}
 
-   server.sin_family = AF_INET;
-   server.sin_port = htons(port);
-   server.sin_addr = *((struct in_addr *)hp->h_addr);
-   memset(&(server.sin_zero), 0, 8);
-
-   if (connect(sckfd, (struct sockaddr *)&server, sizeof(struct sockaddr)) < 0)
-      diep("connect()");
-
-   return sckfd;
-}
-
-void sendbuftosck(int sckfd, const char *buf, int len)
-{
-   int bytessent, pos;
-
-   pos = 0;
-   do {
-      if ((bytessent = send(sckfd, buf + pos, len - pos, 0)) < 0)
-         diep("send()");
-      pos += bytessent;
-   } while (bytessent > 0);
 }

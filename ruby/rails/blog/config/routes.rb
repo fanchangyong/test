@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :posts 
+
+	get ':year(/:month(/:day))', to: 'posts#index', constraints: {year: /\d{4}/,month: /\d{2}/,day: /\d{2}/}
+
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
