@@ -10,13 +10,13 @@
 #include <unistd.h>
 #include <pthread.h>
 
-#define BACKLOG 5
+#define BACKLOG 1
 #define PORT 8888
 
 // Global
 int lsock = -1;
 int kq = -1;
-int thread_num = 4;
+int thread_num = 1;
 
 // Function declarations
 void do_accept();
@@ -30,19 +30,27 @@ void err(char* str)
 
 void reg_read_fd(int kq,int fd)
 {
-	struct kevent evch;
-	evch.ident = fd;
-	evch.flags = EV_ADD;
-	evch.filter = EVFILT_READ;
-	if(kevent(kq,&evch,1,NULL,0,NULL)==-1)
+	struct kevent ev;
+	EV_SET(&ev,fd,EVFILT_READ,EV_ADD|EV_CLEAR,0,0,0);
+	if(kevent(kq,&ev,1,NULL,0,NULL)==-1)
 	{
 		err("kevent change event");
 	}
 }
 
+void reg_write_fd(int kq,int fd)
+{
+	struct kevent ev;
+	EV_SET(&ev,fd,EVFILT_WRITE,EV_ADD,0,0,0);
+	if(kevent(kq,&ev,1,NULL,0,NULL) == -1)
+	{
+		err("kevent regist write");
+	}
+}
+
 void* event_loop(void* p)
 {
-	const int event_len = 1024;
+	const int event_len = 100;
 	for(;;)
 	{
 		struct kevent evlist[event_len];
@@ -52,11 +60,12 @@ void* event_loop(void* p)
 			err("kevent");
 		}
 
+		printf("n:%d\n",n);
 		int i;
 		for(i=0;i<n;i++)
 		{
-			int flags = evlist[i].flags;
-			int fd = evlist[i].ident;
+			uint16_t flags = evlist[i].flags;
+			uintptr_t fd = evlist[i].ident;
 			int data = evlist[i].data;
 
 			if(flags & EV_ERROR)
@@ -64,15 +73,20 @@ void* event_loop(void* p)
 				printf("err:%s\n",strerror(data));
 				exit(0);
 			}
-			printf("flags:%d\n",flags);
-
-			if(fd==lsock)
+			else if(flags & EV_EOF)
 			{
-				do_accept();
+				printf("EOF\n");
 			}
 			else
 			{
-				do_read(fd,data);
+				if(fd==lsock)
+				{
+					do_accept();
+				}
+				else
+				{
+					do_read(fd,data);
+				}
 			}
 		}
 	}
@@ -93,7 +107,7 @@ void do_read(int fd,int size)
 	}
 	else
 	{
-		printf("Read:%s\n",buf);
+		write(fd,buf,size);
 	}
 }
 

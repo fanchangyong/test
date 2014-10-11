@@ -22,7 +22,7 @@ void reg_write_fd(int kq,int fd)
 	bzero(&ev,sizeof(struct kevent));
 	ev.ident = fd;
 	ev.filter = EVFILT_WRITE;
-	ev.flags = EV_ADD;
+	ev.flags = EV_ADD|EV_CLEAR;
 	if(kevent(kq,&ev,1,NULL,0,NULL)==-1)
 	{
 		err("kevent");
@@ -35,6 +35,7 @@ unsigned short port = 8888;
 int kq;
 int event_loop_num = 1;
 int msg_interval = 1; 
+int connections = 10;
 
 void* event_loop(void* p)
 {
@@ -87,6 +88,7 @@ int main(int argc,char** argv)
 	kq = kqueue();
 	if(kq==-1)
 	{
+		perror("kqueue");
 		return -1;
 	}
 	struct sockaddr_in rmtaddr_in;
@@ -96,15 +98,8 @@ int main(int argc,char** argv)
 
 	socklen_t socklen = sizeof(struct sockaddr_in);
 
-	// start event loop
 	int i;
-	pthread_t *threads = malloc(sizeof(pthread_t)*event_loop_num);
-	for(i=0;i<event_loop_num;i++)
-	{
-		//pthread_create(&threads[i],NULL,event_loop,NULL);
-	}
-
-	for(;;)
+	for(i=0;i<connections;i++)
 	{
 		int sock = socket(PF_INET,SOCK_STREAM,0);
 		if(sock==-1)
@@ -123,16 +118,19 @@ int main(int argc,char** argv)
 			{
 				err("connect");
 			}
-			else
-			{
-				reg_write_fd(kq,sock);
-			}
 		}
-		else
-		{
-			printf("connect ok!\n");
-		}
+		reg_write_fd(kq,sock);
 	}
+
+	// start event loop
+	pthread_t *threads = malloc(sizeof(pthread_t)*event_loop_num);
+	for(i=0;i<event_loop_num;i++)
+	{
+		pthread_create(&threads[i],NULL,event_loop,NULL);
+	}
+
+	printf("done\n");
+	getchar();
 	return 0;
 }
 
