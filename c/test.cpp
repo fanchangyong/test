@@ -1,42 +1,32 @@
-#include <cstring>
-#include <iostream>
+#include <v8.h>
 
-int main(int argc, char* argv[])
-{
-   const char text[] = "olé" ;
-   const wchar_t wtext[] = L"olé" ;
+using namespace v8;
 
-   std::cout << "sizeof(char)    : " << sizeof(char) << std::endl ;
-   std::cout << "text            : " << text << std::endl ;
-   std::cout << "sizeof(text)    : " << sizeof(text) << std::endl ;
-   std::cout << "strlen(text)    : " << strlen(text) << std::endl ;
+int main(int argc, char* argv[]) {
+  // Create a new Isolate and make it the current one.
+  Isolate* isolate = Isolate::New();
+  Isolate::Scope isolate_scope(isolate);
 
-   std::cout << "text(binary)    :" ;
+  // Create a stack-allocated handle scope.
+  HandleScope handle_scope(isolate);
 
-   for(size_t i = 0, iMax = strlen(text); i < iMax; ++i)
-   {
-      std::cout << " " << static_cast<unsigned int>(static_cast<unsigned char>(text[i])) ;
-   }
+  // Create a new context.
+  Local<Context> context = Context::New(isolate);
 
-   std::cout << std::endl << std::endl ;
+  // Enter the context for compiling and running the hello world script.
+  Context::Scope context_scope(context);
 
-   std::cout << "sizeof(wchar_t) : " << sizeof(wchar_t) << std::endl ;
-   //std::cout << "wtext           : " << wtext << std::endl ; <- error
-   std::cout << "wtext           : UNABLE TO CONVERT NATIVELY." << std::endl ;
-   std::wcout << L"wtext           : " << wtext << std::endl;
+  // Create a string containing the JavaScript source code.
+  Local<String> source = String::NewFromUtf8(isolate, "'Hello' + ', World!'");
 
-   std::cout << "sizeof(wtext)   : " << sizeof(wtext) << std::endl ;
-   std::cout << "wcslen(wtext)   : " << wcslen(wtext) << std::endl ;
+  // Compile the source code.
+  Local<Script> script = Script::Compile(source);
 
-   std::cout << "wtext(binary)   :" ;
+  // Run the script to get the result.
+  Local<Value> result = script->Run();
 
-   for(size_t i = 0, iMax = wcslen(wtext); i < iMax; ++i)
-   {
-      std::cout << " " << static_cast<unsigned int>(static_cast<unsigned short>(wtext[i])) ;
-   }
-
-   std::cout << std::endl << std::endl ;
-
-
-   return 0;
+  // Convert the result to an UTF8 string and print it.
+  String::Utf8Value utf8(result);
+  printf("%s\n", *utf8);
+  return 0;
 }

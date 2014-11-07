@@ -31,7 +31,7 @@ void err(char* str)
 void reg_read_fd(int kq,int fd)
 {
 	struct kevent ev;
-	EV_SET(&ev,fd,EVFILT_READ,EV_ADD|EV_CLEAR,0,0,0);
+	EV_SET(&ev,fd,EVFILT_READ,EV_ADD,0,0,0);
 	if(kevent(kq,&ev,1,NULL,0,NULL)==-1)
 	{
 		err("kevent change event");
@@ -76,6 +76,7 @@ void* event_loop(void* p)
 			else if(flags & EV_EOF)
 			{
 				printf("EOF\n");
+				close(fd);
 			}
 			else
 			{
@@ -107,6 +108,7 @@ void do_read(int fd,int size)
 	}
 	else
 	{
+		printf("* Read:%d\n",nread);
 		write(fd,buf,size);
 	}
 }
@@ -159,19 +161,20 @@ int main(int argc,char** argv)
 	}
 
 	reg_read_fd(kq,lsock);
+	event_loop(NULL);
 
-	pthread_t *tids = malloc(thread_num*sizeof(pthread_t));
-	int i;
-	for(i=0;i<thread_num;i++)
-	{
-		pthread_t tid;
-		pthread_create(&tids[i],NULL,event_loop,NULL);
-	}
+	/*pthread_t *tids = malloc(thread_num*sizeof(pthread_t));*/
+	/*int i;*/
+	/*for(i=0;i<thread_num;i++)*/
+	/*{*/
+		/*pthread_t tid;*/
+		/*pthread_create(&tids[i],NULL,event_loop,NULL);*/
+	/*}*/
 
-	for(i=0;i<thread_num;i++)
-	{
-		pthread_join(tids[i],NULL);
-	}
+	/*for(i=0;i<thread_num;i++)*/
+	/*{*/
+		/*pthread_join(tids[i],NULL);*/
+	/*}*/
 
 	return 0;
 }

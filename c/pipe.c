@@ -27,7 +27,7 @@ struct cmd_t cmds[]=
 
 int main()
 {
-	int len=sizeof(cmds)/sizeof(struct cmd_t);	
+	int len=sizeof(cmds)/sizeof(struct cmd_t);
 	int i;
 
 	int fds[len][2];
@@ -35,7 +35,7 @@ int main()
 	// create pipes
 	fds[0][0]=STDIN_FILENO;
 	fds[len-1][1]=STDOUT_FILENO;
-	
+
 	for(i=1;i<len;++i)
 	{
 		int fd[2];
@@ -47,7 +47,7 @@ int main()
 	for(i=0;i<len;++i)
 	{
 		struct cmd_t cmd=cmds[i];
-		
+
 		pid_t pid=fork();
 		if(pid<0)
 		{
@@ -71,7 +71,7 @@ int main()
 			{
 				if(fds[j][0]!=STDIN_FILENO)
 				{
-					close(fds[j][0]);	
+					close(fds[j][0]);
 				}
 				if(fds[j][1]!=STDOUT_FILENO)
 				{
@@ -94,7 +94,7 @@ int main()
 	{
 		if(fds[j][0]!=STDIN_FILENO)
 		{
-			close(fds[j][0]);	
+			close(fds[j][0]);
 		}
 		if(fds[j][1]!=STDOUT_FILENO)
 		{
