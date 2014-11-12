@@ -28,7 +28,7 @@ int main()
 	}
 	else // parent
 	{
-		sleep(5);
+		sleep(60);
 		printf("parent exit\n");
 	}
 	return 0;
